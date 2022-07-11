@@ -1,0 +1,13 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tittleFooter{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.iconContainer{
+display: flex;
+
+}
