@@ -8,23 +8,8 @@ header {
     padding: 1.2rem 3rem;
     display: flex;
     width: 100%;
-
     background-color: gainsboro;
 
-}
-header div {
-    display: flex;
-}
-
-.tittle {
-    font-weight: 700;
-    text-transform: uppercase;
-
-}
-
-.tittle img {
-    width: 30%;
-    padding-left: 2rem;
 }
 
 ul {
@@ -44,11 +29,3 @@ a {
     font-weight: 600;
 }
 
-.cart {
-    padding-top: 1.5rem;
-}
-
-.cart img {
-    width: 2rem;
-    height: 2rem;
-}

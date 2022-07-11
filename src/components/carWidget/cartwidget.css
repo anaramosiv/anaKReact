@@ -1,0 +1,16 @@
+.cart {
+    padding-top: 1.5rem;
+}
+
+.cart img {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
