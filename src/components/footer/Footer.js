@@ -1,25 +1,7 @@
 import React from 'react'
 import './footer.css'
-import facebook from '../../image/social/FacebookOutlined.png'
-import instagram from'../../image/social/InstagramOutlined.png'
+import socialMedia from '../socialMedia/socialMedia.js'
 
-const socialMedia = [
-    {
-    "nombre": "Facebook",
-      "id": 1,
-      "image":facebook,
-      "link": "https://faceboook.com",
- 
-    },
-    {
-        "nombre": "Instagram",
-          "id": 2,
-          "image": instagram,
-          "link": "https://instagram.com",
-     
-        }
-
-]
 const Footer = () => {
   return (
     <div className='footerContainer'>
@@ -28,8 +10,8 @@ const Footer = () => {
         <div className="iconContainer">
             {socialMedia.map(media=>{
                 return(
-                    <div>
-                        <img src={media.image}/>
+                    <div key={media.id}>
+                        <img src={media.image} alt="..."/>
                         <p>{media.nombre}</p>
 
                     </div>
@@ -37,7 +19,6 @@ const Footer = () => {
             }           
             )}
         </div>
-
     </div>
   )
 }
