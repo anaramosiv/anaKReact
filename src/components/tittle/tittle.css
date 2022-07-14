@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-section{
+.titulo{
     background-color: black;
     color:azure;
     height: 80vh;

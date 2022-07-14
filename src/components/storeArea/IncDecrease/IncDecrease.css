@@ -1,0 +1,18 @@
+.incDecrease{
+    background-color: rgba(47,79,79,0.4);
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    width: fit-content;
+    margin-top: 3rem;
+}
+.incDecrease button {
+    padding: 0.2rem  0.6rem;
+    border-radius: 5px;
+    border: transparent;
+}
+.addCart{
+    display: block;
+    margin-top: 1rem;
+}
+
