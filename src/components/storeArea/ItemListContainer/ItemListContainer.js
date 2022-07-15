@@ -1,6 +1,6 @@
 import React from 'react'
 import './itemListContainer.css'
-import IncDecrease from '../IncDecrease/IncDecrease'
+import Itemlist from '../ItemList/itemlist'
 
 
 const ItemListContainer = () => {
@@ -13,8 +13,8 @@ const ItemListContainer = () => {
 
   return (
     <section className='areaCards'>
+        <Itemlist onAdd = {onAdd} />
 
-        <IncDecrease minAdd ={1} stock ={10} onAdd = {onAdd}/>
     </section>
   )
 }
