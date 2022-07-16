@@ -2,10 +2,9 @@ import React, {useEffect, useState} from 'react'
 import eventos from './info'
 import Item from '../Item/item';
 
-
 const Itemlist = ({onAdd}) => {
     const [events, setEvents] = useState([]);
-    
+  
     useEffect(() => {
     
         const promesa = new Promise(function (resolve, rejected) {
@@ -16,11 +15,13 @@ const Itemlist = ({onAdd}) => {
         
         });
          promesa.then((res)=>{
-            setEvents(res)
+            setEvents(res);
+          
          }
          )}, [])
        
     return ( 
+
     <div> {events.map((entradas)=> {
         return (
             <div key={entradas.id}>
@@ -37,17 +38,8 @@ const Itemlist = ({onAdd}) => {
             
             /></div>
 
-
-
-
-       )}     
-        
-        
-        
-        )};
-    
-    
-    
+       )}          
+        )};    
      </div>
     )
 }

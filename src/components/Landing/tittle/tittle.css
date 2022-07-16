@@ -1,11 +1,7 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .titulo{
-    background-color: black;
+  
     color:azure;
     height: 80vh;
     display: flex;
@@ -16,7 +12,14 @@
 h1{
   font-size: 60px;
   padding-bottom: 5rem;
+  font-family: 'Anton', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
 }
-h2{
+.titulo h2{
     font-size: 48px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    
 }

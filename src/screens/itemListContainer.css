@@ -1,0 +1,14 @@
+
+
+.areaCardsTittle{
+    text-align: center;
+    padding-top: 3rem;
+    color: #F5F5F5;
+    font-weight: 300;
+    
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+}
+.areaCards {
+    background-color: #171214;
+}

@@ -1,14 +1,20 @@
 .footerContainer{
+    padding: 2rem 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    background-color: #171214 ;
 }
 
-.tittleFooter{
-    font-size: 2rem;
-    font-weight: 700;
+.footerContainer p{
+color: #F5F5F5
 }
+
 .iconContainer{
 display: flex;
+}
 
+.iconContainer a{
+    padding: 0.4rem;
 }

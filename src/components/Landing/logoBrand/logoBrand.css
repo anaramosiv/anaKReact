@@ -1,0 +1,16 @@
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+.brand img {
+    width: 40%; 
+   
+
+}

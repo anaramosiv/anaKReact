@@ -1,0 +1,60 @@
+
+.cardBoss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.cardComplete {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #46454A;
+    margin-top: 2rem;
+    padding: 0.3rem;
+    font-family: 'Lato', sans-serif;
+    min-height: 35vh;
+
+}
+
+.imgEvents {
+    width: 100%;
+    height: 100%;
+}
+
+.imgDate {
+    position: relative;
+    flex:1 1 25% ;
+
+}
+
+.date {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 2rem;
+    color: #F5F5F5;
+}
+
+.cardText {
+    padding: 2rem;
+    color: #F5F5F5;
+    flex: 1 1 50%
+}
+
+.cardText h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase; 
+    font-weight: 400;
+
+    
+}
+.cardText p{
+    padding: 0.25rem;
+ 
+}

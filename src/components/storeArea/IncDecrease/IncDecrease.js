@@ -28,9 +28,11 @@ export const IncDecrease = ({stock, minAdd, onAdd}) => {
   return (
     <div className="incDecrease">
       <p>Cantidad</p>
+      <div className="sumRest">
       <button onClick={() => handleStockRestar({minAdd})}> - </button>
       <span> {start} </span>
       <button onClick={() => handleStockSumar({stock})}> + </button>
+      </div>
       <button disabled={minAdd<=0} onClick={()=>onAdd(start)} className="addCart">Agregar al Carrito</button>
     </div>
   );

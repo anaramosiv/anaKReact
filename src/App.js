@@ -1,18 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import Tittle from './components/tittle/Tittle';
+import Landing from './screens/Landing'
 import Footer from './components/footer/Footer';
-import ItemListContainer from './components/storeArea/ItemListContainer/ItemListContainer';
+import ItemListContainer from './screens/ItemListContainer';
 
 function App() {
   return (
     <div>
       
-      <NavBar/>
-      <Tittle titulo="El mejor precio para tus boletos" subtitulo="Vive la música al máximo"/>
+      <Landing/>
       <ItemListContainer/>
-       <Footer/>
+      <Footer/>
 
     </div>
   );

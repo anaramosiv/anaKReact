@@ -1,6 +1,6 @@
 import React from 'react'
-import './itemListContainer.css'
-import Itemlist from '../ItemList/itemlist'
+import '../screens/itemListContainer.css'
+import Itemlist from '../../src/components/storeArea/ItemList/itemlist'
 
 
 const ItemListContainer = () => {
@@ -13,6 +13,7 @@ const ItemListContainer = () => {
 
   return (
     <section className='areaCards'>
+      <h2 className="areaCardsTittle">Próximos eventos</h2>
         <Itemlist onAdd = {onAdd} />
 
     </section>
