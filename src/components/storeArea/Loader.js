@@ -20,7 +20,7 @@ const  Loader= () =>{
                     <p><Skeleton/></p>
                     <p><Skeleton/></p>
                 </div>
-                <div className='IncDecrease'></div>
+                {/* <div className='IncDecrease'></div> */}
             </div>
             </div>
         </div>

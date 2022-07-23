@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import eventos from './info'
-import Item from '../Item/item';
+import eventos from '../ItemList/info'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../Loader';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
 
-const Itemlist = ({onAdd}) => {
+const ItemDetailContainer = ({onAdd}) => {
     const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading]= useState(false)
   
@@ -40,14 +40,15 @@ const Itemlist = ({onAdd}) => {
         return (
             <div key={entradas.id}>
     
-            <Item nombre = {entradas.name} 
-                  date = {entradas.date}
-                  time = {entradas.time}
-                  image = {entradas.image}
-                  priceMin = {entradas.priceMin}
-                  priceMax = {entradas.priceMax}
-                  status = {entradas.status}
-                  onAdd = {onAdd}
+            <ItemDetail nombre = {entradas.name} 
+                        descripcion ={entradas.descripcion}
+                        date = {entradas.date}
+                        time = {entradas.time}
+                        image = {entradas.image}
+                        priceMin = {entradas.priceMin}
+                        priceMax = {entradas.priceMax}
+                        status = {entradas.status}
+                        onAdd = {onAdd}
 
             
             /></div>
@@ -58,4 +59,4 @@ const Itemlist = ({onAdd}) => {
     )}
 }
 
-export default Itemlist
+export default ItemDetailContainer

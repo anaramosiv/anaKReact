@@ -3,6 +3,7 @@
 const eventos = [
     {
         name: "Mad Cool Festival 2022 - Jueves Día 7",
+        descripcion : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... ESTO LO TRAERÉ DE LA API",
         date: "07 JUL",
         id: "Z698xZ2qZaAG2",
         time: "21:00",
@@ -16,6 +17,7 @@ const eventos = [
     
     {
         name: "Imagine Dragons | Ultimate Imagine Dragons Fan Experience",
+        descripcion : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
         date: "11 JUL",
         id: "Z698xZ2qZa6dq",
         time: "21:00",
@@ -28,6 +30,7 @@ const eventos = [
 
     {
         name: "Imagine Dragons: Mercury World Tour",
+        descripcion : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
         date: "11 JUL",
         id: "Z698xZ2qZakHT",
         time: "21:00",
