@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
+    padding: 2rem 0;
 }
 
 .cardComplete {
@@ -57,4 +57,23 @@
 .cardText p{
     padding: 0.25rem;
  
+}
+.goDetails button{
+    font-family: 'Lato', sans-serif;
+    padding: 0.6rem 0.3rem;
+    background-color: #8739FA;
+    font-size: 1.15rem;
+    border: 1px solid transparent;
+  }
+
+  .goDetails button:hover{
+    background-color: rgba(135, 57, 250, 0.85);
+  }
+.goDetails{
+   
+    display: flex;
+    flex: 1 1 20%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
 }

@@ -19,10 +19,7 @@ const Item = ({nombre, id, date, time, image, priceMin, priceMax, onAdd}) => {
           <p>{time}</p>
           <p>Precios: {priceMin} € - {priceMax} € </p>
        </div>
-       {/* <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/> */}
-       <div  className="goDetails">
-       <button>Ver detalles</button>
-       </div>
+       <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>
     </div>
     </div>
   )

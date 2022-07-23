@@ -8,7 +8,7 @@ const Landing = () => {
   return (
     <div>
         <section className='landingPage'>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Tittle titulo="El mejor precio para tus boletos" subtitulo="Vive la música al máximo"/>
         </section> 
 

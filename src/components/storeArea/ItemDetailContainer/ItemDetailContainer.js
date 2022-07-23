@@ -15,7 +15,7 @@ const Itemlist = ({onAdd}) => {
                
                 setTimeout(() => {
                 resolve(eventos)
-                }, 5000);
+                }, 3000);
         
         });
          promesa.then((res)=>{
