@@ -58,15 +58,18 @@
     padding: 0.25rem;
  
 }
-.goDetails button{
+.boton{
     font-family: 'Lato', sans-serif;
-    padding: 0.6rem 0.3rem;
+    padding: 1rem 2rem;
     background-color: #8739FA;
     font-size: 1.15rem;
     border: 1px solid transparent;
+    text-decoration: none;
+    color: #F5F5F5;
+    
   }
 
-  .goDetails button:hover{
+  .boton:hover{
     background-color: rgba(135, 57, 250, 0.85);
   }
 .goDetails{
@@ -77,3 +80,7 @@
     justify-content: center;
     background-color: rgb(245, 245, 245);
 }
+.cardDetail{
+    min-height: 70vh;
+    background-color: #171214;
+} 

@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# El proyecto
+
+El proyecto fue diseñado con la idea de crear un sitio para realizar la compra de boletos de conciertos y festivales de musica. 
+
+# Ideas o enfoques
+Diseño de cards estilo tickets para que el usuario identifique facilmente el evento de su interés. 
+
+# Dependencias instaladas
+Se instaló Skeleton de react-loading-skeleton para darle un aspecto mas dinámico a las cards mientras se renderizan
+
+# A continuacion documentacion por defecto de React, la conservo por si es necesario mirarla mas adelante
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

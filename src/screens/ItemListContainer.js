@@ -1,23 +1,56 @@
-import React from 'react'
-import '../screens/itemListContainer.css'
-import Itemlist from '../../src/components/storeArea/ItemList/itemlist'
-
+import React, {useEffect, useState} from 'react'
+import eventos from '../components/storeArea/ItemList/info'
+import 'react-loading-skeleton/dist/skeleton.css'
+import Loader from '../components/storeArea/Loader';
+import Itemlist from '../components/storeArea/ItemList/Itemlist';
+import './itemListContainer.css'
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
+
+
+  const [events, setEvents] = useState([]);
+  const [isLoading, setIsLoading]= useState(true);
+
+  const {categoriaId} =useParams();
+
   
-  const onAdd =(quantity)=>{
+    useEffect(() => {
+     
+        const promesa = new Promise(function (resolve, rejected) {
+               
+                setTimeout(() => {
+                setIsLoading(false)
+                resolve(eventos)
+                }, 2000);
+        
+        }); 
+        if (categoriaId){
+        
+          promesa.then(res => setEvents(res.filter(Conciertos => Conciertos.category === categoriaId )));
+  
+        }else{
+   
+          promesa.then(res =>setEvents(res))
+        }        
+        
+        }, [categoriaId])
 
-    console.log(`has añadido ${quantity} entradas al carrito`)
-      
-  }
+         if (isLoading === true ){
+          return (
+              <Loader/>
+          )
+        }else {
+          return(
+            <main>
+              <Itemlist events = {events}/>
+            </main>
+          )
 
-  return (
-    <section className='areaCards'>
-      <h2 className="areaCardsTittle">Próximos eventos</h2>
-        <Itemlist onAdd = {onAdd} />
+        }
+        
 
-    </section>
-  )
+
 }
 
 export default ItemListContainer

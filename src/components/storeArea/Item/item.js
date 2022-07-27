@@ -1,30 +1,30 @@
 import React from 'react'
-import IncDecrease from '../IncDecrease/IncDecrease'
 import "./item.css"
+import { Link } from 'react-router-dom';
 
-const Item = ({nombre, id, date, time, image, priceMin, priceMax, onAdd}) => {
+const Item = ({name, id, date, time, image, priceMin, priceMax, status}) => {
   return (
-    <div className="cardBoss">
-    <div className="cardComplete">
+    <section className="cardBoss">
+    <article className="cardComplete">
         <div className="imgDate">
-          <img className="imgEvents" src={image} alt={nombre}></img>
+          <img className="imgEvents" src={image} alt={name}></img>
           <div className="date">
             {/* Cuando traiga esto de la api lo convierto a string de otra manera */}
-          <p>{date[0]+date[1]}</p>
-          <p>{date[3]+date[4]+date[5]}</p>
+          <p>{date[8]+date[9]}</p>
+          <p>{date[5]+date[6]}</p>
           </div>
         </div>
         <div className="cardText">
-          <h4>{nombre}</h4>
+          <h4>{name}</h4>
           <p>{time}</p>
           <p>Precios: {priceMin} € - {priceMax} € </p>
        </div>
-       {/* <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/> */}
+   
        <div  className="goDetails">
-       <button>Ver detalles</button>
+        <Link className="boton" to={`/detalle/${id}`}>Ver Detalle</Link> 
        </div>
-    </div>
-    </div>
+    </article>
+    </section>
   )
 }
 

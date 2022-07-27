@@ -3,13 +3,13 @@ header {
     padding: 1.2rem 3rem;
     display: flex;
     width: 100%;
-    background-color: transparent;
+    background-color: #171214;
+  
 }
 
 ul {
     width: 100%;
- 
-    display: flex;
+     display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -24,5 +24,10 @@ li {
     text-decoration: none;
     /* color: #f5f5f5; */
     font-weight: 600;
+    color:#F5F5F5 ;
+}
+.navBar ul li a:hover{
+ 
+    color:blueviolet;
 }
 

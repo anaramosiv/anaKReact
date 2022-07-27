@@ -3,7 +3,7 @@ import './NavBar.css';
 import navItems from '../NavItems/navItems';
 import CartWidget from '../carWidget/CartWidget';
 import LogoBrand from '../logoBrand/LogoBrand';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const NavBar = () => {
 
   return (
@@ -11,11 +11,11 @@ const NavBar = () => {
     <header className ="navBar">
       <LogoBrand/>
       <ul>
-        {/* <Link to="/ListContainer">AQUI A ITEM</Link> */}
+        {/* <NavLink to="/ListContainer">AQUI A ITEM</Link> */}
         {navItems.map(items=>{
           const {id, item, path}=items
           return(
-            <li key={id}> <Link to={path}>{item}</Link></li>
+            <li key={id}> <NavLink to={path}>{item}</NavLink></li>
             // <li key={id}><a href="#">{item}</a></li>
           )
         })}

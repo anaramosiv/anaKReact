@@ -13,7 +13,7 @@ const Footer = () => {
                 return(
                     <div key={media.id}>
                         {/* Linkear "A la manera de React" Por que esta dando un warning de que no se hace así */}
-                        <a href={media.link} target="_blank">
+                        <a href={media.link} target="_blank" rel="noreferrer">
                         <img src={media.image} alt="..."/>
                         
                         </a>
