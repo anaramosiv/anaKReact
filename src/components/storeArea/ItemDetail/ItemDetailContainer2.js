@@ -7,10 +7,7 @@ import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer2 = () => {
 
-    const onAdd =(quantity)=>{
-
-        alert(`has añadido ${quantity} entradas al carrito`)
-    }
+  
 
     const [detalle, setDetalle] = useState([]);
     const [loading, setLoading]= useState(true);
@@ -49,7 +46,7 @@ const ItemDetailContainer2 = () => {
             return(
               <main>
 
-                <ItemDetail2 detalle = {detalle} onAdd = {onAdd}/>
+                <ItemDetail2 detalle = {detalle} />
               </main>
             )
 

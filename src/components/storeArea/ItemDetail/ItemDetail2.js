@@ -1,10 +1,21 @@
 import React from 'react'
 import IncDecrease from '../IncDecrease/IncDecrease'
 import './ItemDetail.css'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
-const ItemDetail2 = ({detalle, onAdd}) => {
+const ItemDetail2 = ({detalle}) => {
+  const [addCart, setAddCart] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+  const onAdd =(quantity)=>{
+    setAddCart(true)
+    setQuantity (quantity)
+
+}
+
   return (
+
 
       <section className="cardBoss cardDetail">
         <article className="cardComplete">
@@ -20,7 +31,16 @@ const ItemDetail2 = ({detalle, onAdd}) => {
           <p>Precio: {detalle.priceMax} € </p>
           </div>
           <div  className="goDetails">
-          <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>
+            {
+              addCart
+              ? <div><Link to="/carrito" className="boton">Ir Al Carrito</Link>
+                <p style={{padding: "1rem"}}>Has agregado {quantity} entradas al carrito</p>
+                </div>
+                      
+              : <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>
+              
+            }
+      
           </div>
       
       </article>
