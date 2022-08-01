@@ -22,7 +22,7 @@ const ItemListContainer = () => {
                 setTimeout(() => {
                 setIsLoading(false)
                 resolve(eventos)
-                }, 2000);
+                }, 500);
         
         }); 
         if (categoriaId){

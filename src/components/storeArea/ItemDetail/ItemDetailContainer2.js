@@ -22,7 +22,7 @@ const ItemDetailContainer2 = () => {
                   setTimeout(() => {
                   setLoading(false)
                   resolve(eventos)
-                  },  2000);
+                  },  500);
 
 
           });

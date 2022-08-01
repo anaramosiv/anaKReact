@@ -3,14 +3,19 @@ import IncDecrease from '../IncDecrease/IncDecrease'
 import './ItemDetail.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../../../context/CartContext/CartContext'
 
 
 const ItemDetail2 = ({detalle}) => {
   const [addCart, setAddCart] = useState(false);
+
   const [quantity, setQuantity] = useState(0);
+  const {addProduct} = useCartContext(detalle, quantity);
+
   const onAdd =(quantity)=>{
     setAddCart(true)
     setQuantity (quantity)
+    addProduct(detalle, quantity)
 
 }
 
@@ -34,7 +39,7 @@ const ItemDetail2 = ({detalle}) => {
             {
               addCart
               ? <div><Link to="/carrito" className="boton">Ir Al Carrito</Link>
-                <p style={{padding: "1rem"}}>Has agregado {quantity} entradas al carrito</p>
+
                 </div>
                       
               : <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>

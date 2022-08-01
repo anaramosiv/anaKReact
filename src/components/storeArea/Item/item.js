@@ -2,7 +2,12 @@ import React from 'react'
 import "./item.css"
 import { Link } from 'react-router-dom';
 
+
+
+
 const Item = ({name, id, date, time, image, priceMin, priceMax, status}) => {
+
+
   return (
     <section className="cardBoss">
     <article className="cardComplete">
