@@ -9,18 +9,6 @@ export const useCartContext = ()=> useContext (CartContext)
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
-    // const addProduct =(item, newQuantity)=>{
-    //     const newCart =cart.filter(prod=> prod.id!==item.id);
-    //     newCart.push ({...item, quantity:newQuantity})
-    //     setCart (newCart);
-
-    // }
-    // const addProduct =(item, newQuantity)=>{
-    //     const {quantity  = 0} = cart.find(prod =>prod.item.id === item.id) || {};
-    //     const newCart = cart.filter(prod => prod.item.id !== item.id);
-    //     setCart ([...newCart, {item,  quantity: quantity + newQuantity}])
-
-    // }
     const addProduct =(item, quantity) =>{
         if ( isInCart(item.id)){
             setCart(cart.map(product =>{
@@ -35,6 +23,18 @@ const CartProvider = ({children}) => {
     }
 
     console.log('carrito', cart)
+
+    const totalAmount = () =>{
+        return cart.reduce((prev, last) => prev + last.quantity * last.priceMax, 0);
+    }
+
+    console.log("monto", (totalAmount()))
+
+  const totalItems =()=> cart.reduce((value, lastValue) => value + lastValue.quantity, 0);
+    console.log( "total", totalItems())
+
+
+
     const wipeCart =() =>setCart ([]);
 
     const isInCart = (id) =>{
@@ -42,6 +42,7 @@ const CartProvider = ({children}) => {
     }
 
     const removeProduct =(id) => setCart(cart.filter(product => product.id !==id))
+    
 
 
   return (
@@ -50,7 +51,9 @@ const CartProvider = ({children}) => {
         isInCart,
         removeProduct,
         addProduct,
-        cart
+        cart,
+        totalAmount,
+        totalItems
 
 
     }}>
