@@ -8,7 +8,7 @@ const  Loader= () =>{
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
 
         <div>
-            <div className='cardBoss'>
+            <div className='cardBoss skeleton'>
             <div className="cardComplete">
       
               

@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
 
   return (
-    <div>
+    <>
     <header className ="navBar">
       <LogoBrand/>
       <ul>
@@ -24,7 +24,7 @@ const NavBar = () => {
     <CartWidget/>
 
   </header>
-  </div>
+  </>
   )
 }
 

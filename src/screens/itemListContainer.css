@@ -1,5 +1,4 @@
 
-
 .areaCardsTittle{
     text-align: center;
     padding-top: 3rem;
@@ -10,4 +9,5 @@
 }
 .areaCards {
     background-color: #171214;
+    padding-top: 4.5rem;
 }

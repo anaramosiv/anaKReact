@@ -42,9 +42,9 @@ const ItemListContainer = () => {
           )
         }else {
           return(
-            <main>
+            <section className='areaCards'>
               <Itemlist events = {events}/>
-            </main>
+            </section>
           )
 
         }

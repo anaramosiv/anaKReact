@@ -4,6 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../Loader';
 import ItemDetail2 from './ItemDetail2'
 import { useParams } from 'react-router-dom';
+import {getFireStore} from 'firebase/firestore'
 
 const ItemDetailContainer2 = () => {
 

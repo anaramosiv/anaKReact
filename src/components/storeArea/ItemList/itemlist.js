@@ -7,10 +7,10 @@ const Itemlist = ({events}) => {
         
     return ( 
 
-        <section className='areaCards'>
+        <>
         <h2 className="areaCardsTittle">Próximos eventos</h2>
           
-       <div>
+       <div className='cardBoss'>
         {events.map((entradas ) =>{
           return (
             <Item  key = {entradas.id} {...entradas}
@@ -20,7 +20,7 @@ const Itemlist = ({events}) => {
         }
         )}
        </div>
-      </section>
+      </>
 );
 };
 

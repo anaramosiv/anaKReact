@@ -8,8 +8,8 @@ const LogoBrand = () => {
   return (
     <div className="brand">
       <Link to={"/"}>
-      <img src = {myimage} alt="logo"/>
-      <p>OndaTickets</p>
+      <img className = "imgLogo" src = {myimage} alt="logo"/>
+      OndaTickets
       </Link>
   </div>
   )

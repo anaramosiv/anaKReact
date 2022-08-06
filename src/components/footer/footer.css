@@ -1,10 +1,12 @@
 .footerContainer{
-    padding: 2rem 0;
-    width: 100%;
+    padding: 2rem 1rem;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
     background-color: #171214 ;
+
 }
 
 .footerContainer p{
@@ -18,3 +20,10 @@ display: flex;
 .iconContainer a{
     padding: 0.4rem;
 }
+
+@media(max-width: 768px){
+.mediaIcon img{
+    width: 20px;
+
+    
+}}

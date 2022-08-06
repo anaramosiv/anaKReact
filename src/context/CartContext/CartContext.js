@@ -25,7 +25,7 @@ const CartProvider = ({children}) => {
     console.log('carrito', cart)
 
     const totalAmount = () =>{
-        return cart.reduce((prev, last) => prev + last.quantity * last.priceMax, 0);
+        return cart.reduce((prev, act) => prev + act.quantity * act.priceMax, 0);
     }
 
     console.log("monto", (totalAmount()))

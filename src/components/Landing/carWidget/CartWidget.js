@@ -9,10 +9,10 @@ const CartWidget = () => {
   const {totalItems} =useCartContext()
   return (
     
-        <div>
-          <Link  className = 'Cart' to="/carrito">
+        <div className = 'cart'>
+          <Link  to="/carrito">
             <img src = {cart} alt="logo"/>
-            <p>Carrito <span>{totalItems() !== 0 && totalItems() }</span></p>
+            Carrito <span>{totalItems() !== 0 && totalItems() }</span>
           </Link>
         </div>
  

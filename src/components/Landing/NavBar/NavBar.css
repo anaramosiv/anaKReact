@@ -3,7 +3,8 @@ header {
     padding: 1.2rem 3rem;
     display: flex;
     width: 100%;
-    background-color: #171214;
+    background-color: transparent;
+    position: absolute;
   
 }
 
@@ -12,13 +13,27 @@ ul {
      display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 li {
     display: inline-block;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    text-align: center;
 }
+
+@media(max-width: 768px){
+    ul{
+        background-color: transparent;
+        font-size: 11px;
+ 
+    }
+    li{
+        padding: 0.5rem 0.5rem;
+    }
+}
+
 
 .navBar ul li a {
     text-decoration: none;

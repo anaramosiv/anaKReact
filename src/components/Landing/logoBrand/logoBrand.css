@@ -1,16 +1,19 @@
 
-
 .brand {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     color: #f5f5f5;
+
 }
 
-.brand img {
-    width: 40%; 
+.imgLogo{
+    width: 40%;
+  
+
+    
   
 }
 .brand a {

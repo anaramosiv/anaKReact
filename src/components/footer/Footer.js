@@ -11,8 +11,7 @@ const Footer = () => {
         <div className="iconContainer">
             {socialMedia.map(media=>{
                 return(
-                    <div key={media.id}>
-                        {/* Linkear "A la manera de React" Por que esta dando un warning de que no se hace así */}
+                    <div key={media.id} className="mediaIcon">
                         <a href={media.link} target="_blank" rel="noreferrer">
                         <img src={media.image} alt="..."/>
                         

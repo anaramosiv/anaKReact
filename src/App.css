@@ -6,6 +6,14 @@
 body{
   font-size: 16px;
   background-color: #171214;
+  position: relative;
+  }
+  
+@media(max-width: 768px){
+  body{
+    font-size: 10px;
+  }
+  
   }
 
 

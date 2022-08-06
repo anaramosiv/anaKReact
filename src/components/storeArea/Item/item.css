@@ -1,24 +1,37 @@
 
 .cardBoss {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 2rem 0;
 }
 
-.cardComplete {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #46454A;
-    margin-top: 2rem;
-    padding: 0.3rem;
-    font-family: 'Lato', sans-serif;
-    min-height: 35vh;
 
+    .cardComplete {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #46454A;
+        margin-top: 2rem;
+        padding: 0.3rem;
+        font-family: 'Lato', sans-serif;
+        min-height: 35vh;
+    
+    }
+
+
+@media (max-width: 1000px){
+    .cardComplete{
+        flex-direction: column;
+    }
+    .goDetails{
+        padding: 2rem;
+    }
 }
+
 
 .imgEvents {
     width: 100%;
@@ -60,7 +73,7 @@
 }
 .boton{
     font-family: 'Lato', sans-serif;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     background-color: #8739FA;
     font-size: 1.15rem;
     border: 1px solid transparent;
@@ -80,7 +93,3 @@
     justify-content: center;
     background-color: rgb(245, 245, 245);
 }
-.cardDetail{
-    min-height: 70vh;
-    background-color: #171214;
-} 

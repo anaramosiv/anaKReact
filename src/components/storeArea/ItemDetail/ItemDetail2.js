@@ -22,7 +22,7 @@ const ItemDetail2 = ({detalle}) => {
   return (
 
 
-      <section className="cardBoss cardDetail">
+      <section className="cardBoss areaCards">
         <article className="cardComplete">
          <div className="imgDate">
           <img className="imgEvents" src={detalle.image} alt={detalle.nombre}></img>
@@ -38,9 +38,9 @@ const ItemDetail2 = ({detalle}) => {
           <div  className="goDetails">
             {
               addCart
-              ? <div><Link to="/carrito" className="boton">Ir Al Carrito</Link>
+              ? <><Link to="/carrito" className="boton">Ir Al Carrito</Link>
 
-                </div>
+                </>
                       
               : <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>
               

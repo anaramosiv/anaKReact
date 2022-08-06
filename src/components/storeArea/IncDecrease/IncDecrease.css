@@ -1,3 +1,11 @@
+
+@media(max-width: 768px){
+    .incDecrease{
+        display: flex;
+    }
+}
+
+
 .incDecrease{
     background-color: #F5F5F5;
     padding: 1rem;
