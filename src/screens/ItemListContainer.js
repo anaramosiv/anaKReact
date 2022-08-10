@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import eventos from '../components/storeArea/ItemList/info'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../components/storeArea/Loader';
 import Itemlist from '../components/storeArea/ItemList/Itemlist';
 import './itemListContainer.css'
 import { useParams } from 'react-router-dom';
+import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
 const ItemListContainer = () => {
 
@@ -16,22 +16,28 @@ const ItemListContainer = () => {
 
   
     useEffect(() => {
-     
-        const promesa = new Promise(function (resolve, rejected) {
-               
-                setTimeout(() => {
-                setIsLoading(false)
-                resolve(eventos)
-                }, 500);
-        
-        }); 
+        const db = getFirestore();
+        const itemsCollection =collection(db, "eventos");
+        // Filtra por categoría y muestra la categoría
         if (categoriaId){
-        
-          promesa.then(res => setEvents(res.filter(Conciertos => Conciertos.category === categoriaId )));
-  
-        }else{
    
-          promesa.then(res =>setEvents(res))
+            const qfilter =query(itemsCollection, where("category", "==", categoriaId));
+            getDocs(qfilter).then(snapshot => {
+              const data = snapshot.docs.map(doc =>({id: doc.id, ...doc.data()}))
+              setEvents(data);
+              setIsLoading(false)
+      
+            })
+        }
+          // Si no se filtra, devuelve todo....
+        else{
+            getDocs(itemsCollection).then(snapshot => {
+            const data = snapshot.docs.map(doc =>({id: doc.id, ...doc.data()}))
+  
+            setEvents(data);
+            setIsLoading(false)           
+  
+          })      
         }        
         
         }, [categoriaId])
@@ -46,10 +52,7 @@ const ItemListContainer = () => {
               <Itemlist events = {events}/>
             </section>
           )
-
         }
-        
-
 
 }
 

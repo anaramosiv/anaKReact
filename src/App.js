@@ -11,9 +11,11 @@ import Cart from './components/storeArea/Cart/Cart';
 import CartProvider from './context/CartContext/CartContext';
 
 
+
 function App() {
   return (
     <>
+    
       
       <BrowserRouter>
         <CartProvider>

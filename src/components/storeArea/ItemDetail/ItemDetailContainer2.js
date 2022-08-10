@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import eventos from '../ItemList/info'
+
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../Loader';
 import ItemDetail2 from './ItemDetail2'
 import { useParams } from 'react-router-dom';
-import {getFireStore} from 'firebase/firestore'
+import {getFirestore, getDoc, doc} from 'firebase/firestore'
 
 const ItemDetailContainer2 = () => {
-
-  
 
     const [detalle, setDetalle] = useState([]);
     const [loading, setLoading]= useState(true);
@@ -17,26 +15,17 @@ const ItemDetailContainer2 = () => {
 
 
       useEffect(() => {
+        const db =getFirestore();
+        //Consulta un documento dentro de la colección que tenga esa ID
+        const queryDoc = doc(db, "eventos", detalleId);
+        getDoc(queryDoc)
+        //Setear el detalle con los datos obtenidos de firebase
+        //data es el objeto con la informacion, firebase lo tiene con ese nombre.
+        .then(res=> setDetalle({id: res.id, ...res.data()}))
 
-          const promesa = new Promise(function (resolve) {
-
-                  setTimeout(() => {
-                  setLoading(false)
-                  resolve(eventos)
-                  },  500);
-
-
-          });
-
-      
-            promesa.then(resolve =>{
-            setDetalle(resolve.find(detalle => detalle.id === detalleId ))
+        setLoading(false);
             
-            
-            });
-              
-
-          }, [])
+          }, [detalleId])
 
            if (loading === true ){
             return (
@@ -46,7 +35,6 @@ const ItemDetailContainer2 = () => {
           }else {
             return(
               <main>
-
                 <ItemDetail2 detalle = {detalle} />
               </main>
             )
