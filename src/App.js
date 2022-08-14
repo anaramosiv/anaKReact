@@ -9,6 +9,8 @@ import ItemDetailContainer2 from './components/storeArea/ItemDetail/ItemDetailCo
 import NavBar from './components/Landing/NavBar/NavBar';
 import Cart from './components/storeArea/Cart/Cart';
 import CartProvider from './context/CartContext/CartContext';
+import Checkout from './components/storeArea/Checkout/Checkout';
+import CartOrderPlacement from './components/storeArea/CartOrderPlacement/CartOrderPlacement';
 
 
 
@@ -26,6 +28,8 @@ function App() {
             <Route path ="/ListContainer/:categoriaId" element= { <ItemListContainer/>} />
             <Route path ="/detalle/:detalleId" element ={<ItemDetailContainer2/>}/>
             <Route path ="/carrito" element ={<Cart />}/>
+            <Route path="/checkout" element ={<Checkout/>}/>
+            <Route path='/placement' element = {<CartOrderPlacement/>}/>
             </Routes>
         </CartProvider>
         <Footer/>

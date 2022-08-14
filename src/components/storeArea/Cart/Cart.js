@@ -5,6 +5,10 @@ import './cart.css'
 import ItemCart from './ItemCart';
 import CartResume from './CartResume';
 
+import BuyerForm from '../../storeArea/BuyerForm/BuyerForm'
+import FormContainer from '../BuyerForm/FormContainer';
+import Checkout from '../Checkout/Checkout';
+
 
 const Cart = () => {
 
@@ -36,6 +40,9 @@ const Cart = () => {
     </div>
 
     <CartResume/>
+
+ 
+
    
     </section>
 
