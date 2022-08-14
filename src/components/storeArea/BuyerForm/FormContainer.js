@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import BuyerForm from './BuyerForm';
 import { useCartContext } from '../../../context/CartContext/CartContext';
 import {getFirestore, collection, addDoc, doc, getDoc} from "firebase/firestore"
+import CartOrderPlacement from "../CartOrderPlacement/CartOrderPlacement";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -67,20 +68,21 @@ const FormContainer = () => {
     //       }, [id])
 
         //  
-
-        
-    
-
-
   return (
+    <div>
+    {(typeof id !== "undefined") ?
+    <CartOrderPlacement 
+    id={id}
+    form={form}/>
+    :
     <BuyerForm sendFirebase ={sendFirebase} 
-     form ={form} 
-        // fullOrder ={fullOrder}
-      changeHandler={changeHandler}
-      id={id}
-
-     
+    form ={form} 
+    changeHandler={changeHandler}
+    id={id}     
        />
+    }
+       </div>
+  
   )
 }
 

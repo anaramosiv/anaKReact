@@ -1,9 +1,9 @@
 import React from "react";
-import CartOrderPlacement from "../CartOrderPlacement/CartOrderPlacement";
 
 
 
-const BuyerForm = ({form,changeHandler,sendFirebase, id, fullOrder}) => {
+
+const BuyerForm = ({form,changeHandler,sendFirebase}) => {
 
  
     const handleSubmit = (ev) => {
@@ -13,15 +13,7 @@ const BuyerForm = ({form,changeHandler,sendFirebase, id, fullOrder}) => {
 
   return (
     <div>
-        {(typeof id !== "undefined") ?
-        <div>
-        <h4> Compra realizada con id: {id}</h4> 
-
-        <CartOrderPlacement id={id}
-                           form={form}
-                        //    fullOrder={fullOrder}
-                        />
-        </div>      :
+       
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Nombre</label>
@@ -44,7 +36,7 @@ const BuyerForm = ({form,changeHandler,sendFirebase, id, fullOrder}) => {
             </div>
             
         </form>
-         }
+         
     </div>
     
   )
