@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import BuyerForm from './BuyerForm';
+import React, {useState} from 'react'
+import BuyerForm from '../BuyerForm/BuyerForm';
 import { useCartContext } from '../../../context/CartContext/CartContext';
-import {getFirestore, collection, addDoc, doc, getDoc} from "firebase/firestore"
+import {getFirestore, collection, addDoc} from "firebase/firestore"
 import CartOrderPlacement from "../CartOrderPlacement/CartOrderPlacement";
-import { useNavigate } from 'react-router-dom';
+import './formContainer.css'
+
 
 
 const FormContainer = () => {
@@ -15,13 +16,10 @@ const FormContainer = () => {
     });
     
     const [id, setId] = useState();
-    // const [fullOrder, setFullOrder]  = useState({})
-
-    
-    // let history = useNavigate();
 
     const {cart, totalAmount,  wipeCart} =useCartContext();
     const {name, email, address, phone} = form
+
   
     const order ={
         buyer:
@@ -34,6 +32,8 @@ const FormContainer = () => {
         total: totalAmount(),
     }
 
+
+
     const changeHandler = (ev) => {
             const {value, name} = ev.target;
             setForm({...form, [name]: value});
@@ -41,16 +41,17 @@ const FormContainer = () => {
   
 
     const sendFirebase = ()=>{
-
         const db = getFirestore();
         const ordersCollection =collection(db, "orders");
         // setFullOrder(order);
+       
         addDoc(ordersCollection, order).then(snapshot => setId(snapshot.id));
         wipeCart();
-  
+
+            
     }
-    
-    
+    //Probando cosas... Borrar si no funciona
+
     // console.log("Esta es toda la orden", fullOrder)
     // useEffect(() => {
     //     if (id){
@@ -68,17 +69,23 @@ const FormContainer = () => {
     //       }, [id])
 
         //  
+
+
+
   return (
-    <div>
+    <div className='formContainer'>
     {(typeof id !== "undefined") ?
+
     <CartOrderPlacement 
     id={id}
-    form={form}/>
+    form={form}
+   />
+
     :
     <BuyerForm sendFirebase ={sendFirebase} 
     form ={form} 
     changeHandler={changeHandler}
-    id={id}     
+    id={id}
        />
     }
        </div>

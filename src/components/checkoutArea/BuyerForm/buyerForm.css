@@ -1,0 +1,50 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput textarea {
+    resize: none;
+    height: 3rem;
+    background-color :rgba(255, 235, 205, 0.1);
+    color: #F5F5F5;
+}
+    
+
+.formInput input{
+    background-color :rgba(255, 235, 205, 0.1);
+    height: 2rem;
+    color: #F5F5F5;
+}
+.formInput label{
+
+    font-size: 1.15rem;
+}
+.formInput textarea:focus, .formInput input:focus{
+    outline: none;
+    border-bottom: 2px solid #8739FA ;
+}
+
+.buttonPlacement{
+    padding: 0.6rem 0.3rem;
+     margin-top: 1rem;
+    background-color: #8739FA;
+    text-align: center;
+    color: #F5F5F5;
+    border-radius: 5px;
+    font-size: 1.15rem;
+}
+.advertisement{
+    font-style: italic;
+    padding: 0.5rem 0;
+}
+.formError{
+    color: #ED351B;
+    font-style: italic;
+    padding: 1rem 0;
+}
+.emptyForm a{
+    text-decoration: none;
+   
+  
+}

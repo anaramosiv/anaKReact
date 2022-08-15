@@ -1,0 +1,21 @@
+.checkout{
+
+    padding-top: 200px;
+    color: #F5F5F5;
+}
+.checkout h3{
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.buyContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (max-width: 992px){
+    .buyContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -88,8 +88,17 @@
 .goDetails{
    
     display: flex;
+    flex-direction: column;
     flex: 1 1 20%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: rgb(245, 245, 245);
+}
+
+.idCode img{
+    width: 100%;
+}
+.idCode{
+  font-weight: bold;
+  text-align: center;
 }

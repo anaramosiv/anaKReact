@@ -2,20 +2,46 @@
     color: #f5f5f5;
     text-align: center;
     padding: 7rem 2rem 0 2rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
 } 
+.areaCartEmpty{
+    color: #f5f5f5;
+    text-align: center;
+    padding: 7rem 2rem 0 2rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+}
+.areaCartEmpty a{
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.areaCartEmpty a:hover{
+ 
+    text-decoration: underline;
+    text-decoration-color: #8739FA;
+    text-decoration-thickness: 4px;
+
+}
 
 .cartFull{
     padding: 2rem;
     margin-top: 1rem;
     text-align: center;
     background-color: #46454A;
-    width: 40vw;
 }
 .cartCenter{
     text-align: center;
 }
 .cartItems{
-    width: 35vw;
+   
     display: flex;
     justify-content: center;
     align-items:center;
@@ -25,6 +51,7 @@
     min-height: 12vh; 
     max-height: 15vh;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .cartItems p {
@@ -36,14 +63,18 @@
 .cartItems button {
     padding: 1rem 0.5rem;
      background-color: #171214;
-     color: #f5f5f5;
-     border: 2px solid #ED351B;
+     color: #ED351B;
+     border: 2px solid transparent;
  }
+ 
 
 .cartResume{
     background-color: #46454A;
-    width: 40vw;
-    padding-top: 1rem;
+    padding-top: 1rem;  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
 }
 
 .totales{
@@ -66,34 +97,36 @@
     border: 1px solid transparent;
     text-decoration: none;
     color: #F5F5F5;
-    margin: auto;
+    margin: 0.5rem auto;
     padding: .5rem;
     width: 20vw;
     
   }
   .vaciar {
+    font-family: 'Lato', sans-serif;
     border: 2px solid #ED351B;
     background: #46454A;
     padding: .5rem;
     width: 20vw;
     margin-bottom: 2rem;
+    color: #ED351B;;
   }
 
   @media (max-width: 992px){
     .cartResume{
-      width: 80vw;
+      width: 100%;
     }
     .cartItems{
-        width: 76vw;
+        width: 100%;
     }
     .cartFull{
-        width: 80vw;
+        width: 100%;
     }
-
-
 }
 
-.checkout{
-    padding-top: 200px;
-    color: #F5F5F5;
+@media (max-width: 992px){
+ .areaCart{
+    flex-direction: column;
+}
+
 }

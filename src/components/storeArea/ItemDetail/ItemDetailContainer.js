@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react'
 
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../Loader';
-import ItemDetail2 from './ItemDetail2'
+import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
 import {getFirestore, getDoc, doc} from 'firebase/firestore'
 
-const ItemDetailContainer2 = () => {
+const ItemDetailContainer = () => {
 
     const [detalle, setDetalle] = useState([]);
     const [loading, setLoading]= useState(true);
@@ -35,7 +35,7 @@ const ItemDetailContainer2 = () => {
           }else {
             return(
               <main>
-                <ItemDetail2 detalle = {detalle} />
+                <ItemDetail detalle = {detalle} />
               </main>
             )
 
@@ -47,4 +47,4 @@ const ItemDetailContainer2 = () => {
   }
 
 
-export default ItemDetailContainer2
+export default ItemDetailContainer

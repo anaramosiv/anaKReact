@@ -4,24 +4,22 @@ import { useCartContext } from '../../../context/CartContext/CartContext'
 import './cart.css'
 import ItemCart from './ItemCart';
 import CartResume from './CartResume';
-
-import BuyerForm from '../../storeArea/BuyerForm/BuyerForm'
-import FormContainer from '../BuyerForm/FormContainer';
-import Checkout from '../Checkout/Checkout';
-
+import CartCard from './CartCards';
 
 const Cart = () => {
 
-  const {cart, totalItems,totalAmount,wipeCart} = useCartContext();
+  const {cart} = useCartContext();
 
-  console.log("Componente cart",cart);
+
 
   if (cart.length === 0){
     return(
-    <div className='areaCart'>
+    <div className='areaCartEmpty'>
         <h3 className='cartEmpty'>Carrito de compras</h3>
         <h4>No has agregado nada al carrito</h4>
-        <Link to ="/events"> Ir a comprar</Link>
+       
+        <Link to ="/events">Ir a comprar algo </Link>
+      
     </div>
     )
   }
@@ -30,20 +28,23 @@ const Cart = () => {
   <section className='areaCart'>
 
       
-        <h3 className='cartFull'>Carrito de compras</h3>
-    
-    
-    <div className='cartResume'>{
+   
+
+    <div className='cartFull'>
+    <h3>Carrito de compras</h3>
+    <article className='cartResume'>{
      
      cart.map(item => <ItemCart key={item.id} item ={item}/>)
     }
-    </div>
+    </article>
 
     <CartResume/>
-
- 
-
-   
+    </div>
+  
+  
+    <CartCard/>
+  
+  
     </section>
 
 

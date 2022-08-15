@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import Item from '../../components/storeArea/Item/item';
+
 
  const CartContext = React.createContext([]);
 
@@ -18,20 +18,18 @@ const CartProvider = ({children}) => {
         }else{
             setCart([...cart, {...item, quantity}])
         }
-
-
     }
 
-    console.log('carrito', cart)
+
 
     const totalAmount = () =>{
-        return cart.reduce((prev, act) => prev + act.quantity * act.priceMax, 0);
+        return cart.reduce((prev, act) => prev + act.quantity * act.priceMax, 0).toFixed(2);
     }
 
-    console.log("monto", (totalAmount()))
+
 
   const totalItems =()=> cart.reduce((value, lastValue) => value + lastValue.quantity, 0);
-    console.log( "total", totalItems())
+
 
 
 
