@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {AiOutlineEuro, AiOutlineClockCircle, AiOutlineCalendar, AiOutlineTag } from "react-icons/ai";
 import { useCartContext } from '../../../context/CartContext/CartContext'
+import { downUpEffect } from '../../FramerMotion/FramerMotion.js'
+import { motion } from "framer-motion";
 
 
 
@@ -27,8 +29,9 @@ const ItemDetail = ({detalle}) => {
 
       <section className="cardBoss areaCards">
 
-        <h4 className='areaCardsTittle'><span><AiOutlineTag/> </span>  Detalle de Entrada</h4>
-        <article className="cardComplete">
+        <h2 className='areaCardsTittle'><span><AiOutlineTag/> </span>  Detalle de Entrada</h2>
+        <motion.div className="cardComplete" 
+        variants={downUpEffect}>
          <div className="imgDate">
           <img className="imgEvents" src={detalle.image} alt={detalle.nombre}></img>
           </div>
@@ -62,7 +65,7 @@ const ItemDetail = ({detalle}) => {
       
           </div>
       
-      </article>
+      </motion.div>
     </section>
   )
 }

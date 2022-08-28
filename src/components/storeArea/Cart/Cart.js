@@ -5,6 +5,7 @@ import './cart.css'
 import ItemCart from './ItemCart';
 import CartResume from './CartResume';
 import CartCard from './CartCards';
+import EmptyCart from './EmptyCart';
 
 const Cart = () => {
 
@@ -14,13 +15,7 @@ const Cart = () => {
 
   if (cart.length === 0){
     return(
-    <div className='areaCartEmpty'>
-        <h3 className='cartEmpty'>Carrito de compras</h3>
-        <h4>No has agregado nada al carrito</h4>
-       
-        <Link to ="/events">Ir a comprar algo </Link>
-      
-    </div>
+      <EmptyCart/>
     )
   }
   return (
@@ -31,7 +26,7 @@ const Cart = () => {
    
 
     <div className='cartFull'>
-    <h3>Carrito de compras</h3>
+    <h2 className='areaCardsTittle'>Carrito de compras</h2>
     <article className='cartResume'>{
      
      cart.map(item => <ItemCart key={item.id} item ={item}/>)

@@ -11,3 +11,15 @@
     background-color: #171214;
     padding-top: 4.5rem;
 }
+
+@media (max-width: 992px){
+    .areaCardsTittle {
+     
+        padding-top: 8rem;
+    }
+    .areaCards {
+        background-color: #171214;
+        padding-top: 4.5rem;
+    }
+ 
+}

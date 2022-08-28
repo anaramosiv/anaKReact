@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../components/storeArea/Loader';
-import Itemlist from '../components/storeArea/ItemList/Itemlist';
+import ItemList from '../components/storeArea/ItemList/ItemList';
 import './itemListContainer.css'
 import { useParams } from 'react-router-dom';
 import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
@@ -24,6 +24,7 @@ const ItemListContainer = () => {
             const qfilter =query(itemsCollection, where("category", "==", categoriaId));
             getDocs(qfilter).then(snapshot => {
               const data = snapshot.docs.map(doc =>({id: doc.id, ...doc.data()}))
+              data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
               setEvents(data);
               setIsLoading(false)
       
@@ -33,9 +34,10 @@ const ItemListContainer = () => {
         else{
             getDocs(itemsCollection).then(snapshot => {
             const data = snapshot.docs.map(doc =>({id: doc.id, ...doc.data()}))
-  
+            data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
             setEvents(data);
-            setIsLoading(false)           
+            setIsLoading(false)   
+           
   
           })      
         }        
@@ -49,7 +51,7 @@ const ItemListContainer = () => {
         }else {
           return(
             <section className='areaCards'>
-              <Itemlist events = {events}/>
+              <ItemList events = {events}/>
             </section>
           )
         }

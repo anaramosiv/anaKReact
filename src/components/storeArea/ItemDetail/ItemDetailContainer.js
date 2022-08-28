@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
-
 import 'react-loading-skeleton/dist/skeleton.css'
 import Loader from '../Loader';
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
 import {getFirestore, getDoc, doc} from 'firebase/firestore'
+import { container } from '../../FramerMotion/FramerMotion.js'
+import { motion } from "framer-motion";
 
 const ItemDetailContainer = () => {
 
@@ -34,9 +35,13 @@ const ItemDetailContainer = () => {
             )
           }else {
             return(
-              <main>
+              <motion.div
+              variants={container}
+              initial="hidden"
+              animate="visible">
+                
                 <ItemDetail detalle = {detalle} />
-              </main>
+              </motion.div>
             )
 
             }

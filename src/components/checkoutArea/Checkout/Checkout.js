@@ -18,7 +18,7 @@ const Checkout = () => {
   return (
         
     <section className='checkout'>
-      <h3>Finalizar compra</h3>
+      <h2>Finalizar compra</h2>
 
       <div className='buyContainer'>
         <FormContainer/>

@@ -6,18 +6,19 @@ import './buyerForm.css'
 
 
 
-const BuyerForm = ({form,changeHandler,sendFirebase}) => {
+const BuyerForm = ({form,changeHandler,sendFirebase, emailMatch}) => {
 
     const {cart } =useCartContext();
+  
 
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
-        // if(cart.length!==0){
+            if (emailMatch === true){
             sendFirebase();
-       
-        
+        }
     }
+ 
     
   return (
 
@@ -32,8 +33,13 @@ const BuyerForm = ({form,changeHandler,sendFirebase}) => {
                 <input type="email" name="email" id="email" value={form.email} onChange={changeHandler} required/>
             </div>
             <div className="formInput">
+                <label htmlFor="email">Escribe de nuevo el email</label>
+                <input type="email" name="email2" id="email" value=  {form.email2} onChange={changeHandler} required/>
+            </div>
+            {(emailMatch)? <p>Los email coinciden</p> : <p className="formError">Las direcciones de Email deben coincidir para generar la orden</p>}
+            <div className="formInput">
                 <label htmlFor="address">Dirección</label>
-                <textarea name="address" id="address" value={form.address} onChange={changeHandler} required></textarea>
+                <textarea name="address" id="address" value={form.address}  onChange={changeHandler} required></textarea>
             </div>
             <div className="formInput">
                 <label htmlFor="phone">Teléfono</label>
@@ -42,7 +48,7 @@ const BuyerForm = ({form,changeHandler,sendFirebase}) => {
 
             {(cart.length !== 0) ?
             <div>
-                <p className="advertisement">Asegúrate que todos los datos estén correctos y finaliza tu orden</p>
+               <p className="advertisement">Asegúrate que todos los datos estén correctos y finaliza tu orden</p>
                 <button type="submit" className="buttonPlacement"> Confirmar compra</button>          
             </div>
             :

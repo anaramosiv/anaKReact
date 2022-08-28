@@ -1,83 +1,37 @@
-# El proyecto
+# El proyecto: Onda Tickets
 
-El proyecto fue diseñado con la idea de crear un sitio para realizar la compra de boletos de conciertos y festivales de musica. 
+Onda Tickets fue diseñado con la idea de crear un e commerce para la compra de boletos de conciertos y festivales de musica, permite filtrar conciertos y festivales por separado, mostrarlos cronologicamente desde el más próximo, mirar el detalle con cada id y contiene un apartado para verificar las compras mediante la id suministrada.
 
-# Ideas o enfoques
+## Link del sitio
+https://ondatickets.netlify.app/
+### Ideas o enfoques
 Diseño de cards estilo tickets para que el usuario identifique facilmente el evento de su interés. 
 
-# Dependencias instaladas
+### Dependencias instaladas
 Se instaló Skeleton de react-loading-skeleton para darle un aspecto mas dinámico a las cards mientras se renderizan
 
-# A continuacion documentacion por defecto de React, la conservo por si es necesario mirarla mas adelante
+Se instaló React Icons para tener acceso a las librerías de ícono de React.
+
+Se instaló Framer Motion para realizar animaciones y transiciones y mejorar la experiencia visual. 
+
+### `Barra de Navegación`
+
+->Home.
+    ->Próximos Eventos.
+        -->Todos los eventos ordenados cronológicamente.
+    ->Conciertos.
+    ->Festivales.
+    ->Consultar compra.
+->Carrito.
+
+### `Navegabilidad`
+
+El Home del sitio es una Hero section, donde se ilustra la experiencia de un evento musical. 
+Por patrón de diseño y experiencia de usuario se decidió no colocar un listado de productos en primera instancia.
 
 
-## Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### `Entorno de desarrollo`
+Esta es una aplicación creada con React
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

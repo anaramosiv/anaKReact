@@ -3,9 +3,13 @@
     padding-top: 200px;
     color: #F5F5F5;
 }
-.checkout h3{
-  text-align: center;
-  padding-bottom: 2rem;
+.checkout h2{
+    text-align: center;
+    padding: 2rem 0;
+    color: #F5F5F5;
+    font-weight: 300;
+     font-size: 2rem;
+    font-family: 'Anton', sans-serif;
 }
 
 .buyContainer{

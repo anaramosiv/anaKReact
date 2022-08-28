@@ -1,9 +1,23 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useCartContext } from '../../../context/CartContext/CartContext'
 
 const CartOrderPlacement = ({id, form}) => {
 
-  console.log("Esta es la id para consultar datos de la compra", id)
+  const {wipeCart} =useCartContext();
 
+  useEffect(() => {
+
+    wipeCart()
+    console.log("Esta es la id para consultar datos de la compra", id)
+
+ 
+  }, [])
+   
+
+
+
+
+ 
   return (
     
     <>
