@@ -1,7 +1,61 @@
 const eventos = [
+    {
+        "image": 	"https://s1.ticketm.net/img/tat/dam/a/a29/7aa8c7a4-c56a-4114-8508-2de9acb63a29_1625891_CUSTOM.jpg",
+        "name": 	"Andalucía Big Festival by Mad Cool 3 días",
+        "descripcion": "Entrada para 8-9 y 10 de septiembre. El festival contará con unos cincuenta artistas de todo el mundo y con una diversa propuesta que contará con artistas de la talla de Muse, Jamiroquai, Biffy Clyro, Vetusta Morla, Los Planetas, Michael Kiwanuka o Stereophonics, entre otros.",
+        "id":           	"Z612xP2qZa74",
+        "title": 		"Andalucía Big Festival by Mad Cool 3 días",
+        "time": 	"18:00:00",
+        "date": "2022-09-08",
+        "status": 	"onsale",
+        "priceMin": 	137.50,
+        "priceMax":     275,
+        "genrename": 	"Various",
+        "Location": "Recinto Ferial Cortijo de Torres",
+        "city": "Malaga",
+        "address":  "Recinto Ferial Cortijo de Torres, 29006 Málaga, España",
+        "category": "Festivales",
+        "url": "https://www.ticketmaster.es/event/andalucia-big-festival-by-mad-cool-entradas/31951"
+    },
+    {
+        "image": 	"https://s1.ticketm.net/img/tat/dam/a/a29/7aa8c7a4-c56a-4114-8508-2de9acb63a29_1625891_CUSTOM.jpg",
+        "name": 	"Andalucía Big Festival by Mad Cool 1 día",
+        "descripcion": "Entrada para 1 día. El festival contará con unos cincuenta artistas de todo el mundo y con una diversa propuesta que contará con artistas de la talla de Muse, Jamiroquai, Biffy Clyro, Vetusta Morla, Los Planetas, Michael Kiwanuka o Stereophonics, entre otros.",
+        "id":           	"Z812x23SZa74",
+        "title": 		"Andalucía Big Festival by Mad Cool 3 días",
+        "time": 	"18:00:00",
+        "date": "2022-09-08",
+        "status": 	"onsale",
+        "priceMin": 	75.9,
+        "priceMax":     137.5,
+        "genrename": 	"Various",
+        "Location": "Recinto Ferial Cortijo de Torres",
+        "city": "Malaga",
+        "address":  "Recinto Ferial Cortijo de Torres, 29006 Málaga, España",
+        "category": "Festivales",
+        "url": "https://www.ticketmaster.es/event/andalucia-big-festival-by-mad-cool-entradas/31951"
+    },
+    {
+        "image": 	"https://s1.ticketm.net/img/tat/dam/a/f16/bce7d32a-9fd8-428e-9b5a-6d2f0f29df16_1307571_CUSTOM.jpg",
+        "name": 	"SUM 41 WITH SPECIAL GUEST SIMPLE PLAN",
+        "descripcion": "Sum 41 acaba de embarcarse junto a Simple Plan en el 'Blame Canadá Tour' en Estados Unidos, En septiembre comenzará la gira europea ‘Does This Look No Killer No Filler’.",
+        "id":           	"Z692xZ2qZagf",
+        "title": 		"SUM 41 WITH SPECIAL GUEST SIMPLE PLAN",
+        "time": 	"21:00:00",
+        "date": "2022-09-27",
+        "status": 	"onsale",
+        "priceMin": 	42,
+        "priceMax":     42,
+        "genrename": 	"Punk",
+        "Location": "WiZink Center, Madrid",
+        "city": "Madrid",
+        "address":  "Av. Felipe II, s/n, 28009 Madrid, España",
+        "category": "Conciertos",
+        "url": "https://www.ticketmaster.es/event/cafe-tacvba-tickets/30283?language=es-es"
+    },
 
     {
-        "image": 	"https://s1.ticketm.net/d…TABLET_LANDSCAPE_3_2.jpg",
+        "image": 	"https://s1.ticketm.net/img/tat/dam/a/f74/af436a6b-ac81-488f-a06d-3042159c8f74_1637311_CUSTOM.jpg",
         "name": 	"Café Tacvba",
         "descripcion": "El grupo de rock, con más 30 años de trayectoria, deleitará a todos sus fans con su inconfundible estilo mezcla de rock, folk indígena, música electrónica y punk.",
         "id":           	"Z698xZ2qZa6_5",
@@ -19,7 +73,7 @@ const eventos = [
         "url": "https://www.ticketmaster.es/event/cafe-tacvba-tickets/30283?language=es-es"
     },
     {
-        "image": "https://s1.ticketm.net/d…2401_ARTIST_PAGE_3_2.jpg",
+        "image": "https://s1.ticketm.net/img/tat/dam/a/742/9c5a8b40-c69b-4b93-b036-cc91f4dd9742_1522401_CUSTOM.jpg",
         "name":     "Counting Crows",
         "descripcion": "Los menores de 16 años sólo podrán acceder al recinto acompañados de padre, madre o tutor legal.",
         "id": 	"Z698xZ2qZakM5",
@@ -37,7 +91,7 @@ const eventos = [
         "url":"https://www.ticketmaster.es/event/counting-crows-tickets/28107?language=es-es",
     },
     {
-        "image": "https://s1.ticketm.net/d…_RETINA_PORTRAIT_3_2.jpg",
+        "image": "https://s1.ticketm.net/img/tat/dam/a/fb2/562be00e-cc2f-4fbc-8268-b820b39a1fb2_1649431_CUSTOM.jpg",
         "name": 	"Angel Olsen",
         "descripcion": "Acceso permitido a mayores de 16 años. Los menores de 16 años, deberán estar acompañados por madre, padre o tutor legal.",
         "id":   "Z698xZ2qZa6Qa",
@@ -52,12 +106,12 @@ const eventos = [
         "city":     "Madrid",
         "address":  "Paseo Bajo de la Virgen del Puerto, s/n, 28005 Madrid, España",
         "category": "Conciertos",
-        "url":  	"https://www.ticketmaster…ets/30345?language=en-us"
+        "url":  	"https://www.ticketmaster.es/event/angel-olsen-entradas/30345"
     },
     {
         "image": "https://s1.ticketm.net/img/tat/dam/a/e1b/f6f7ed52-f226-4e36-acc1-43882824de1b_1703061_CUSTOM.jpg",
         "name": "DCODE 2022",
-        "descripcion": "Cartel DCODE 2022: Crystal FighterS,The Kooks,Years and Years, The Hives, entre otros...",
+        "descripcion": "Cartel DCODE 2022: Crystal FighterS, The Kooks, Years and Years, The Hives, entre otros...",
         "id":    "Z698xdsqZa6Qa",
         "title": 	"DCODE 2022",
         "time":     	"21:00:00",
@@ -72,24 +126,7 @@ const eventos = [
         "category": "Festivales",
         "url":  "https://www.ticketmaster.es/artist/dcode-2019-entradas/973359?int_cmp_name=Dcode-Festival&int_cmp_id=ES-Home-501&int_cmp_creative=Home-main-1&tm_link=tm_ccp_Home_main_Dcode-Festival#info"
     },
-    {
-        "image": "https://s1.ticketm.net/dam/a/260/462e2630-ca6e-467e-9d49-f4bcf154b260_1649691_CUSTOM.jpg",
-        "name": "Jorge Drexler & Coque Malla - Festival Starlite",
-        "descripcion": "Adquiere tus entradas para el concierto de Jorge Drexler & Coque Malla - Festival Starlite",
-        "id": "Z698xZ2qZa6rL",
-        "title": "Jorge Drexler & Coque Malla - Festival Starlite",
-        "time": "22:00:00",
-        "date": "2022-08-13",
-        "status": "onsale",
-        "priceMin": 22.73,
-        "priceMax": 59.09,
-        "genrename": "Rock",
-        "Location": "Auditorio Starlite",
-        "city": "Marbella",
-        "address": "Calle Albinoni, s/n. Cantera de Nagüeles, 29602 Marbella, España",
-        "category": "Festivales",
-        "url": "https://www.ticketmaster.es/event/jorge-drexler--coque-malla-festival-starlite-tickets/30623?language=en-us"
-    },
+
     {
         "image": "https://s1.ticketm.net/dam/a/b2f/8b6be8fb-c563-43a5-b40d-07577b654b2f_1510231_CUSTOM.jpg",
         "name": "Andrea Bocelli - Festival Starlite",
@@ -97,7 +134,7 @@ const eventos = [
         "id": "Z698xZ2qZakzg",
         "title": "Andrea Bocelli - Festival Starlite",
         "time": "22:00:00",
-        "date": "2022-08-15",
+        "date": "2022-09-15",
         "status": "onsale",
         "priceMin": 177.27,
         "priceMax": 434.55,
@@ -115,7 +152,7 @@ const eventos = [
         "id": "Z698xZ2qZa6u_",
         "title": "Ballet Flamenco Sara Baras - Festival Starlite",
         "time": "22:00:00",
-        "date": "2022-08-16",
+        "date": "2022-08-31",
         "status": "onsale",
         "priceMin": 30.91,
         "priceMax": 75.45,
@@ -128,26 +165,7 @@ const eventos = [
     },
 
 
-    {
-        "image": "https://s1.ticketm.net/dam/a/f33/58c7d09f-304d-4c08-88d4-7f3d31c76f33_1681371_RETINA_LANDSCAPE_16_9.jpg",
-        "name": "Farruquito y Arcangel - Festival Starlite",
-        "descripcion": "Adquiere tus entradas para el concierto de Farruquito y Arcangel - Festival Starlite",
-        "id": "Z698xZ2qZa6Jt",
-        "title": "Farruquito y Arcangel - Festival Starlite",
-        "time": "22:00:00",
-        "date": "2022-08-19",
-        "status": "onsale",
-        "priceMin": 20,
-        "priceMax": 45.45,
-        "genrename": "Flamenco",
-        "Location": "Auditorio Starlite",
-        "city": "Marbella",
-        "address": "Calle Albinoni, s/n. Cantera de Nagüeles, 29602 Marbella, España",
-        "category": "Festivales",
-        "url": "https://www.ticketmaster.es/event/farruquito-y-arcangel-festival-starlite-tickets/31145?language=en-us"
-    },
-
-  
+ 
     {
         "image": "https://s1.ticketm.net/dam/a/b21/ddd0398a-d821-45b7-bfe8-539aa145db21_1658851_RETINA_PORTRAIT_16_9.jpg",
         "name": "Luis Fonsi - Festival Starlite",
@@ -155,7 +173,7 @@ const eventos = [
         "id": "Z698xZ2qZa6Ov",
         "title": "Luis Fonsi - Festival Starlite",
         "time": "22:00:00",
-        "date": "2022-08-22",
+        "date": "2022-08-29",
         "status": "onsale",
         "priceMin": 45.46,
         "priceMax": 134.72,
@@ -163,31 +181,10 @@ const eventos = [
         "Location": "Auditorio Starlite",
         "city": "Marbella",
         "address": "Calle Albinoni, s/n. Cantera de Nagüeles, 29602 Marbella, España",
-
         "category": "Festivales",
         "url": "https://www.ticketmaster.es/event/luis-fonsi-festival-starlite-tickets/30721?language=en-us"
     },
-    {
-        "image": "https://s1.ticketm.net/dam/a/822/dde15ec6-6688-4236-8b0d-74aa29027822_1567041_RETINA_LANDSCAPE_16_9.jpg",
-        "name": "Dani Martín - Festival Starlite",
-        "descripcion": "Adquiere tus entradas para el concierto de Dani Martín - Festival Starlite",
-        "id": "Z698xZ2qZa6d6",
-        "title": "Dani Martín - Festival Starlite",
-        "time": "22:00:00",
-        "date": "2022-08-23",   
-        "status": "onsale",
-        "priceMin": 51.82,
-        "priceMax": 131.01,
-        "genrename": "Pop",
-        "Location": "Auditorio Starlite",
-        "city": "Marbella",
-        "address": "Calle Albinoni, s/n. Cantera de Nagüeles, 29602 Marbella, España",
-
-        "category": "Festivales",
     
-        "url": "https://www.ticketmaster.es/event/dani-martin-festival-starlite-tickets/28871?language=en-us"
-    },
-
 
     {
         "image": "https://s1.ticketm.net/dam/a/7bd/6063bf0e-dcfa-4615-ad58-4fbd62e3e7bd_1657941_CUSTOM.jpg",
@@ -206,9 +203,7 @@ const eventos = [
         "address": "Calle Albinoni, s/n. Cantera de Nagüeles, 29602 Marbella, España",
         "category": "Festivales",
         "url": "https://www.ticketmaster.es/event/morat-festival-starlite-tickets/31031?language=en-us"
-    },
-
-    
+    },    
 
     {
         "image": "https://s1.ticketm.net/dam/a/c20/4af9c733-9cb8-4803-a2d5-4b5251d14c20_1551221_TABLET_LANDSCAPE_LARGE_16_9.jpg",
@@ -270,7 +265,7 @@ const eventos = [
     {
         "image": "https://s1.ticketm.net/dam/a/d8e/5432bf7a-0f5e-4b47-8b7d-177892dd2d8e_1464461_RETINA_PORTRAIT_3_2.jpg",
         "name": "Limp Bizkit",
-        "descripcion":"Compra tus entradas para LimpBizkit",
+        "descripcion":"Este concierto está reprogramado hasta nuevo aviso",
         "id": "Z698xZ2qZaAl9",
         "date": "2022-08-24",
         "time": "19:00:00",

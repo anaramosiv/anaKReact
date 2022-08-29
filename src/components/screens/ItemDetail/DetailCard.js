@@ -15,7 +15,7 @@ const DetailCard = ({detalle}) => {
             <p> <span><AiOutlineClockCircle/> </span>  {detalle.time}</p>
             <a href = {detalle.url} target="_blank" rel="noreferrer">Más info Aquí</a>
             <p><span><AiOutlineEuro/></span> Precio: {detalle.priceMax} € </p>
-        </div>
+       </div>
     </>
   )
 }

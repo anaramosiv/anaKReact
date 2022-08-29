@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { initializeApp } from "firebase/app";
 import { getFirestore} from 'firebase/firestore';
 import { doc, setDoc } from 'firebase/firestore';
-import eventos from './ItemList/info';
+import eventos from 'components/helpers/info'
 
 
 const Firebase = () => {
