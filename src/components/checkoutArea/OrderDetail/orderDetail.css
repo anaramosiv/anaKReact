@@ -4,3 +4,24 @@
 .searchZone{
     text-align: center;
 }
+
+.searchZone input{
+    background-color :rgba(255, 235, 205, 0.1);
+    height: 2rem;
+    color: #F5F5F5;
+}
+.searchZone input:focus{
+    outline: none;
+    border-bottom: 2px solid #8739FA;
+}
+
+.searchButton{
+    border: transparent 1px ;
+    color: #F5F5F5;
+    font-size: 1rem;
+    padding: 0.6rem 0.5rem;
+    background-color: #8739FA;
+    margin-left:1rem ;
+
+    
+}

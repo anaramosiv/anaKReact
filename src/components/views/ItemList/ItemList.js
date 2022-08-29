@@ -1,6 +1,5 @@
-import Item from '../Item/item';
+import Item from 'components/storeArea/Item/item';
 import { container } from '../../FramerMotion/FramerMotion.js'
-import { motion } from "framer-motion";
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
@@ -14,7 +13,7 @@ const ItemList = ({events}) => {
         <>
         <h2 className="areaCardsTittle">Próximos eventos</h2>
           
-       <motion.div className='cardBoss'
+       <div className='cardBoss'
        	variants={container}
          initial="hidden"
          animate="visible"
@@ -30,7 +29,7 @@ const ItemList = ({events}) => {
           )
         }
         )}
-       </motion.div>
+       </div>
       </>
 );
 };

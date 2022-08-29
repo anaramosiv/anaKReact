@@ -10,13 +10,17 @@ const  Loader= () =>{
         <div>
             <div className='cardBoss skeleton'>
             <div className="cardComplete">
-      
+            <div className="imgDate">
+                    <p className="imgEvents imgSkeleton"><Skeleton  width ="100%" height = "100%"/></p>
+    
+                </div>
               
                         {/* <p> <Skeleton count={3} width={600} height = {200}/></p> */}
                      
          
                 <div className="cardText">
-                    <h4><Skeleton  height = {60}/></h4>
+                    <h4><Skeleton height={20} /></h4>
+                    <p><Skeleton/></p>
                     <p><Skeleton/></p>
                     <p><Skeleton/></p>
                 </div>

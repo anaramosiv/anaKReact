@@ -1,7 +1,7 @@
 import React , { useState, useEffect }  from 'react';
 import './IncDecrease.css'
 
-export const IncDecrease = ({stock, minAdd, onAdd}) => {
+export const IncDecrease = ({stock, minAdd, onAdd, status}) => {
   const [start, setStart] = useState(parseInt(minAdd));
 
   const handleStockSumar = () => {
@@ -26,14 +26,14 @@ export const IncDecrease = ({stock, minAdd, onAdd}) => {
   )
 
   return (
-    <div className="incDecrease">
+    <div className={`${status!== "onsale"? " incDecrease buttonDisabled": "incDecrease"} `}>
       <p>Cantidad</p>
       <div className="sumRest">
       <button onClick={() => handleStockRestar({minAdd})}> - </button>
       <span> {start} </span>
       <button onClick={() => handleStockSumar({stock})}> + </button>
       </div>
-      <button disabled={minAdd<=0} onClick={()=>onAdd(start)} className="addCart">Agregar al Carrito</button>
+      <button disabled={minAdd<=0} onClick={()=>onAdd(start)} className= "addCart">Agregar al Carrito</button>
     </div>
   );
   

@@ -40,7 +40,7 @@ const inputIdHandler = (ev)=>{
         <h2>Introduce el id para ver los datos de tu compra</h2>
         <div className="searchZone">
        <input onChange={inputIdHandler} value= {id}/>
-       <button onClick={()=>handleBuscar()}>BUSCAR</button>
+       <button onClick={()=>handleBuscar()} className="searchButton">BUSCAR</button>
        </div>
        {(!order)?
        <div className='searchZone'>No se ha encontrado la compra</div>

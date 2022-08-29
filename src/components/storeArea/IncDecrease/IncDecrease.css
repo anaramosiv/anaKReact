@@ -30,6 +30,10 @@
     background-color: #8739FA;
   
 }
+.addCart:hover{
+ opacity: 0.85;
+  
+}
 .sumRest button{
     padding: 0.3rem 0.6rem;
     background-color: rgba(70, 69, 74, 0.6);

@@ -199,7 +199,7 @@ const eventos = [
         "id": "Z698xZ2qZa6rD",
         "title": "Rosalía: MOTOMAMI WORLD TOUR",
         "time": "21:30:00",
-        "date": "2022-07-29",
+        "date": "2022-09-29",
         "status": "onsale",
         "priceMin": 59,
         "priceMax": 136.5,

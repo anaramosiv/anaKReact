@@ -16,4 +16,20 @@ font-size: 1.3rem;
 .skeleton{
     padding-top: 200px;
 }
+.imgSkeleton{
+  
+    width: 80%
+}
+
+@media (max-width: 768px){
+.imgSkeleton{
+    height: 150px;
+    width: 100%
+}
+
+}
+.buttonDisabled{
+    opacity: 0.2;
+    display: none;
+}
 

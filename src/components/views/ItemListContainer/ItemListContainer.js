@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
-import Loader from '../components/storeArea/Loader';
-import ItemList from '../components/storeArea/ItemList/ItemList';
-import './itemListContainer.css'
+import Loader from 'components/storeArea/Loader';
+import ItemList from 'components/views/ItemList/ItemList';
+import './itemListContainer.css'  
 import { useParams } from 'react-router-dom';
 import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
@@ -47,6 +47,7 @@ const ItemListContainer = () => {
          if (isLoading === true ){
           return (
               <Loader/>
+    
           )
         }else {
           return(

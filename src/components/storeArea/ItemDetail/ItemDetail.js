@@ -42,6 +42,7 @@ const ItemDetail = ({detalle}) => {
           <p> <span><AiOutlineCalendar/> </span> {detalle.date} </p> 
            <p> <span><AiOutlineClockCircle/> </span>  {detalle.time}</p>
           <a href = {detalle.url} target="_blank" rel="noreferrer">Más info Aquí</a>
+        
 
           {/* ---------/Estoy tratando de filtrar las entradas por categoría. Aún no me sale :/ ------*/}
           {/* <form>   
@@ -59,7 +60,11 @@ const ItemDetail = ({detalle}) => {
 
                 </>
                       
-              : <IncDecrease  minAdd ={1} stock ={10} onAdd ={onAdd}/>
+              : 
+              <>
+              {detalle.status !== "onsale" && <p className='formError'>Evento no disponible por el momento, próximamente a reprogramar</p>}
+              <IncDecrease  minAdd ={1} stock ={8} onAdd ={onAdd} status={detalle.status}/>
+              </>
               
             }
       

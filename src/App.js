@@ -2,9 +2,9 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './screens/Landing'
+import Landing from './components/screens/Landing'
 import Footer from './components/footer/Footer';
-import ItemListContainer from './screens/ItemListContainer';
+import ItemListContainer from 'components/views/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/storeArea/ItemDetail/ItemDetailContainer';
 import NavBar from './components/Landing/NavBar/NavBar';
 import Cart from './components/storeArea/Cart/Cart';

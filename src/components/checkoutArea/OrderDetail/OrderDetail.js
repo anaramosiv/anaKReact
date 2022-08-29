@@ -5,10 +5,11 @@ const OrderDetail = ({order}) => {
 
 
   return (
-    <div className='orderDetail'> pedido con id: {order.id}
-    <p> a nombre de: {order.buyer.name.name}</p>
-    <p> Fecha de pedido {order.buyer.orderDate}</p>
-    <h3>Productos adquiridos</h3> 
+    <div className='orderDetail'>
+      <p>Pedido con id: {order.id}</p>
+      <p> A nombre de: {order.buyer.name.name}</p>
+      <p> Fecha de pedido {order.buyer.orderDate}</p>
+      <h3>Productos adquiridos</h3> 
      {order.items.map((item, index)=>{
        const {quantity, tittle, id, price} = item
        return(

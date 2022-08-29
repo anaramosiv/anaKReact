@@ -4,17 +4,11 @@ import  barcode  from "./../../../image/barcode.png"
 import { Link } from 'react-router-dom';
 import ItemPreview from './ItemPreview';
 
-
-
-
 const Item = ({name, id, date, time, image, priceMin, priceMax, status}) => {
 
-
   return (
-    <article className="cardComplete"
-    
-    >
-      <ItemPreview name= {name} id={id} date ={date} time ={time} image= {image} priceMin={priceMin} priceMax= {priceMax} />
+    <article className= {`${status!== "onsale"? "disabled cardComplete": "cardComplete"} `} >
+      <ItemPreview name= {name} id={id} date ={date} time ={time} image= {image} priceMin={priceMin} priceMax= {priceMax} status={status} />
       <div  className="goDetails">
         <div className='idCode'>
           <img src={barcode} alt='barcode'></img>
@@ -24,7 +18,6 @@ const Item = ({name, id, date, time, image, priceMin, priceMax, status}) => {
       <Link className="boton" to={`/detalle/${id}`}>Ver Detalle</Link> 
       </div>
     </article>
-
   )
 }
 
