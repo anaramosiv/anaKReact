@@ -2,19 +2,17 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './components/screens/Landing'
-import Footer from './components/footer/Footer';
+import Landing from './components/screens/Landing/Landing'
+import Footer from './components/layout/Footer/Footer';
 import ItemListContainer from 'components/views/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/storeArea/ItemDetail/ItemDetailContainer';
-import NavBar from './components/Landing/NavBar/NavBar';
-import Cart from './components/storeArea/Cart/Cart';
+import ItemDetailContainer from './components/views/ItemDetailContainer/ItemDetailContainer';
+import NavBar from './components/layout/NavBar/NavBar';
+import Cart from './components/views/Cart/Cart';
 import CartProvider from './context/CartContext/CartContext';
-import Checkout from './components/checkoutArea/Checkout/Checkout';
-import CartOrderPlacement from './components/checkoutArea/CartOrderPlacement/CartOrderPlacement';
+import Checkout from './components/screens/Checkout/Checkout';
+import CartOrderPlacement from './components/views/CartOrderPlacement/CartOrderPlacement';
 import ErrorPage from './components/ErrorPage/ErrorPage';
-import OrderDetailContainer from './components/checkoutArea/OrderDetail/OrderDetailContainer';
-
-
+import OrderDetailContainer from './components/views/OrderDetailContainer/OrderDetailContainer';
 
 function App() {
   return (
