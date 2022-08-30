@@ -33,6 +33,12 @@ Nota: Por patrón de diseño y experiencia de usuario se decidió no colocar un 
 
 ### `Capturas de Pantalla`
 
+![Listado de Eventos](/public/CapturaEventos.PNG)
+![Carrito de compras](/public/CapturaCarrito.PNG)
+| ![Listado de Eventos Mobile](/public/MobileEventos.png) | ![Carrito de compras Mobile](/public/MobileCarrito.png)
+
+
+
 
 
 ### `Entorno de desarrollo`
