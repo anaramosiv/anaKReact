@@ -26,7 +26,7 @@ Se instaló Framer Motion para realizar animaciones y transiciones y mejorar la 
 
 ### `Navegabilidad`
 
-El Home del sitio es una Hero section, donde se ilustra la experiencia de un evento musical. 
+El Home del sitio es una Hero section, donde se ilustra la experiencia de un evento musical. EL Navbar es accesible en todas las pantallas.
 Nota: Por patrón de diseño y experiencia de usuario se decidió no colocar un listado de productos en primera instancia.
 
 
@@ -35,12 +35,9 @@ Nota: Por patrón de diseño y experiencia de usuario se decidió no colocar un 
 
 ![Listado de Eventos](/public/CapturaEventos.PNG)
 ![Carrito de compras](/public/CapturaCarrito.PNG)
-| ![Listado de Eventos Mobile](/public/MobileEventos.png) | ![Carrito de compras Mobile](/public/MobileCarrito.png)
-
-
-
+![Listado de Eventos Mobile](/public/MobileEventos.png) 
 
 
 ### `Entorno de desarrollo`
-Esta es una aplicación creada con React
+Esta es una aplicación creada con ReactJS
 
