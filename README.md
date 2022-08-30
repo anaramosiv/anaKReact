@@ -16,19 +16,22 @@ Se instaló Framer Motion para realizar animaciones y transiciones y mejorar la 
 
 ### `Barra de Navegación`
 
-->Home.
-    ->Próximos Eventos.
-        -->Todos los eventos ordenados cronológicamente.
-    ->Conciertos.
-    ->Festivales.
-    ->Consultar compra.
-->Carrito.
+- Home.
+  - Próximos Eventos.
+  -> Todos los eventos ordenados cronológicamente.
+  - Conciertos.
+  - Festivales.
+  - Consultar compra.
+- Carrito.
 
 ### `Navegabilidad`
 
 El Home del sitio es una Hero section, donde se ilustra la experiencia de un evento musical. 
-Por patrón de diseño y experiencia de usuario se decidió no colocar un listado de productos en primera instancia.
+Nota: Por patrón de diseño y experiencia de usuario se decidió no colocar un listado de productos en primera instancia.
 
+
+
+### `Capturas de Pantalla`
 
 
 

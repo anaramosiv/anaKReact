@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCartContext } from '../../../context/CartContext/CartContext'
+import { useCartContext } from 'context/CartContext/CartContext'
 import './cart.css'
 import ItemCart from 'components/screens/Cart/ItemCart';
 import CartResume from 'components/screens/Cart/CartResume';
@@ -10,8 +10,6 @@ const Cart = () => {
 
   const {cart} = useCartContext();
 
-
-
   if (cart.length === 0){
     return(
       <EmptyCart/>
@@ -19,27 +17,19 @@ const Cart = () => {
   }
   return (
 
-  <section className='areaCart'>
-
-      
-   
-
-    <div className='cartFull'>
-    <h2 className='areaCardsTittle'>Carrito de compras</h2>
-    <article className='cartResume'>{
-     
-     cart.map(item => <ItemCart key={item.id} item ={item}/>)
-    }
-    </article>
-
-    <CartResume/>
+  <section className="areaCart">
+    <div className="cartFull">
+      <h2 className="cartTittle">Carrito de compras</h2>
+      <article className="cartResume">{ 
+      cart.map(item => <ItemCart key={item.id} item ={item}/>)
+      }
+      </article>
+      <CartResume/>
     </div>
-  
-  
+
     <CartCard/>
-  
-  
-    </section>
+
+  </section>
 
 
   )

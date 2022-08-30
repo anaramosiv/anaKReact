@@ -9,6 +9,12 @@
     justify-content: center;
 }
 
+.titulo h2{
+font-size: 2rem;
+text-align: center;
+}
+
+
 h1{
   font-size: 4rem;
   padding-bottom: 5rem;

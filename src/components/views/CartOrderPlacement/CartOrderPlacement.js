@@ -9,7 +9,7 @@ const CartOrderPlacement = ({id, form}) => {
   useEffect(() => {
     //una vez generada la orden se limpia el carrito
     wipeCart()
-
+    
     //Dejo este único --console.log-- para poder recuperar los datos de la compra en caso de hacer una consulta
     console.log("Esta es la id para consultar datos de la compra", id)
 

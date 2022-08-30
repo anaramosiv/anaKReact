@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import BuyerForm from 'components/screens/BuyerForm/BuyerForm';
 import { useCartContext } from 'context/CartContext/CartContext';
 import {getFirestore, collection, addDoc} from "firebase/firestore"
+import BuyerForm from 'components/screens/BuyerForm/BuyerForm';
 import CartOrderPlacement from "components/views/CartOrderPlacement/CartOrderPlacement";
 
 const FormContainer = () => {
@@ -26,23 +26,23 @@ const FormContainer = () => {
         phone: {phone},
         address:{address},
         orderDate : new Date(Date.now()).toLocaleDateString()
-     
+        
         },
         items: cart.map(ticket =>({id: ticket.id, tittle: ticket.name, price: ticket.priceMax, quantity: ticket.quantity})),
         total: totalAmount(),
     }
-
+    //Esta función captura los datos introducidos en los input
     const changeHandler = (ev) => {
             const {value, name} = ev.target;
             setForm({...form, [name]: value})
            
+            //Condicion que compara el input email con email2
             if (name=== 'email2'){
                 if (form.email === ev.target.value){
                     setEmailMatch(true)
                 }else{
                     setEmailMatch(false)
                 }
-
             }           
         }
 
@@ -52,23 +52,23 @@ const FormContainer = () => {
            addDoc(ordersCollection, order).then(snapshot => setId(snapshot.id));   
     }
  
-  return (
-    <div className='formContainer'>
-    {(typeof id !== "undefined") ?
+     return (
+        <div className="formContainer">
+            {(typeof id !== "undefined") ?
 
-    <CartOrderPlacement 
-    id={id}
-    form={form}
-   />
-    :
-    <BuyerForm sendFirebase ={sendFirebase} 
-    form ={form} 
-    changeHandler={changeHandler}
-    id={id}
-    emailMatch={emailMatch}
-       />
-    }
-       </div>
+            <CartOrderPlacement 
+            id={id}
+            form={form}
+            />
+            :
+            <BuyerForm sendFirebase ={sendFirebase} 
+            form ={form} 
+            changeHandler={changeHandler}
+            id={id}
+            emailMatch={emailMatch}
+            />
+             }
+        </div>
   )
 }
 

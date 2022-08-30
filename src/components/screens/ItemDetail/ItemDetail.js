@@ -1,11 +1,10 @@
-import React from 'react'
-import IncDecrease from 'components/views/IncDecrease/IncDecrease'
-import './itemDetail.css'
-import { useState } from 'react'
+import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
+import './itemDetail.css'
 import {AiOutlineTag } from "react-icons/ai";
-import { downUpEffect } from 'components/helpers/FramerMotion/FramerMotion'
 import { motion } from "framer-motion";
+import { toRightEffect } from 'components/helpers/FramerMotion/FramerMotion'
+import IncDecrease from 'components/views/IncDecrease/IncDecrease'
 import DetailCard from './DetailCard'
 
 
@@ -14,9 +13,9 @@ const ItemDetail = ({detalle}) => {
   return (
       <section className="cardBoss areaCards">
 
-        <h2 className='areaCardsTittle'><span><AiOutlineTag/> </span>  Detalle de Entrada</h2>
+        <h2 className="detailTittle"><span><AiOutlineTag/> </span>  Detalle de Entrada</h2>
         <motion.div className="cardComplete" 
-                    variants={downUpEffect}>
+                    variants={toRightEffect}>
 
           <DetailCard detalle={detalle}/>
             <div  className="goDetails">
@@ -33,13 +32,6 @@ const ItemDetail = ({detalle}) => {
                     }
           </div>
       </motion.div>
-        {/* ---------/Estoy tratando de filtrar las entradas por categoría. Aún no me sale :/ ------*/}
-          {/* <form>   
-            <input type="radio" id="priceMin" name="ticketType" value={()=>setPriceSelected(detalle.priceMin)} checked/>
-            <label for="general">Entrada General: {detalle.priceMin}</label>
-            <input type="radio" id="priceMax" name="ticketType" value={()=>setPriceSelected(detalle.priceMax)}/>
-            <label for="premium">Entrada Premium: {detalle.priceMax}</label>
-          </form> */}
     </section>
     
   )

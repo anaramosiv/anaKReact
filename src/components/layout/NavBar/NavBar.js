@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import navItems from 'components/helpers/navItems';
 import CartWidget from 'components/layout/carWidget/CartWidget';
 import LogoBrand from 'components/layout/logoBrand/LogoBrand';
-import { NavLink } from 'react-router-dom';
+
 const NavBar = () => {
   return (
     <>

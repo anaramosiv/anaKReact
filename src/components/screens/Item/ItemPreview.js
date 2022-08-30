@@ -1,8 +1,9 @@
 import React from 'react'
-import {AiOutlineEuro, AiOutlineClockCircle, AiOutlineCalendar } from "react-icons/ai";
 import { month } from 'components/helpers/Months';
+import {AiOutlineEuro, AiOutlineClockCircle, AiOutlineCalendar } from "react-icons/ai";
 
-const ItemPreview = ({name, date, time, image, priceMin, priceMax}) => {
+
+const ItemPreview = ({name, date, time, image,  priceMax}) => {
   return (
     <>
     <div className="imgDate">
@@ -16,7 +17,7 @@ const ItemPreview = ({name, date, time, image, priceMin, priceMax}) => {
       <h4>{name}</h4>
       <p> <span><AiOutlineClockCircle size={16}/> </span>{time}</p>
       <p> <span><AiOutlineCalendar size={16}/> </span>{date}</p>
-      <p>Precios: <AiOutlineEuro size={16}/> {priceMin} - {priceMax} € </p>
+      <p className="priceCard"> <AiOutlineEuro size={16}/> Precio: {priceMax} € </p>
    </div>
   </>
   )

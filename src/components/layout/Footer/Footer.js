@@ -5,7 +5,7 @@ import socialMedia from 'components/helpers/socialMedia'
 
 const Footer = () => {
   return (
-    <div className='footerContainer'>
+    <div className="footerContainer">
         <LogoBrand/>      
         <p>Todos los derechos reservados OndaTickets By AK</p>
         <div className="iconContainer">
@@ -13,9 +13,8 @@ const Footer = () => {
                 return(
                     <div key={media.id} className="mediaIcon">
                         <a href={media.link} target="_blank" rel="noreferrer">
-                        <img src={media.image} alt="..."/>
+                        <img src={media.image} alt= {media.nombre}/>
                         </a>
-
                     </div>
                 )
             }           

@@ -1,17 +1,17 @@
-//------Componente sin uso por que no lo he implementado bien!...---------
+//Framer motion para animacion de entrada en el detalle
 
 export const container={
 
     hidden:{},
     visible:{
-        //     transition:{
-        //     delayChildren: 0.3,
-        //     staggerChildren: 0.3,
-        // },
+            transition:{
+            delayChildren: 0,
+            staggerChildren: 0,
+        },
     },
 };
 
-export const downUpEffect = {
+export const toRightEffect = {
 	hidden: { x: -200, opacity: 0 },
 	visible: {
 		x: 0,

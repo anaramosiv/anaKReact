@@ -1,6 +1,6 @@
 import React from 'react'
-import {AiOutlineEuro, AiOutlineClockCircle, AiOutlineCalendar } from "react-icons/ai";
 import './itemDetail.css'
+import {AiOutlineEuro, AiOutlineClockCircle, AiOutlineCalendar, AiOutlineInfoCircle } from "react-icons/ai";
 
 const DetailCard = ({detalle}) => {
   return (
@@ -13,8 +13,8 @@ const DetailCard = ({detalle}) => {
             <p>{detalle.descripcion }</p>
             <p> <span><AiOutlineCalendar/> </span> {detalle.date} </p> 
             <p> <span><AiOutlineClockCircle/> </span>  {detalle.time}</p>
-            <a href = {detalle.url} target="_blank" rel="noreferrer">Más info Aquí</a>
-            <p><span><AiOutlineEuro/></span> Precio: {detalle.priceMax} € </p>
+            <a href = {detalle.url} target="_blank" rel="noreferrer"><span><AiOutlineInfoCircle/></span> Más info Aquí</a>
+            <p className="priceCard"><span><AiOutlineEuro/></span> Precio: {detalle.priceMax} € </p>
        </div>
     </>
   )

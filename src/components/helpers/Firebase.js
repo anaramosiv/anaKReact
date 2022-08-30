@@ -4,7 +4,7 @@ import { getFirestore} from 'firebase/firestore';
 import { doc, setDoc } from 'firebase/firestore';
 import eventos from 'components/helpers/info'
 
-
+//Componente para subir todos los productos a firebase. Solo se usa para actualizar la base de datos.
 const Firebase = () => {
 
     const firebaseConfig = {
@@ -22,7 +22,7 @@ const Firebase = () => {
     //   
       useEffect(() => {
         
-       const write = async(id ,name, image,descripcion, date, status, time, priceMin, priceMax, genrename, Location, city, address, category, url)=>{
+       const write = async(id ,name, image,descripcion, date, status, time, priceMax, genrename, Location, city, address, category, url)=>{
         await setDoc(doc(db, `eventos`, `${id}`),{
            
             'id': id,
@@ -32,7 +32,6 @@ const Firebase = () => {
             "date": date,
             "status":status,
             "time": time,
-            "priceMin": priceMin,
             "priceMax": priceMax,
             "genrename": genrename,
             "Location": Location,
@@ -46,7 +45,7 @@ const Firebase = () => {
        }
 
       eventos.map((item) =>{
-        write(item.id,item.name, item.image, item.descripcion, item.date, item.status, item.time, item.priceMin, item.priceMax, item.genrename, item.Location, item.city, item.address, item.category, item.url)
+        write(item.id,item.name, item.image, item.descripcion, item.date, item.status, item.time, item.priceMax, item.genrename, item.Location, item.city, item.address, item.category, item.url)
       }
       )
               

@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../../context/CartContext/CartContext";
+import { useCartContext } from 'context/CartContext/CartContext';
 import './buyerForm.css'
 
 
-const BuyerForm = ({form,changeHandler,sendFirebase, emailMatch}) => {
+const BuyerForm = ({form, changeHandler, sendFirebase, emailMatch}) => {
 
     const {cart } =useCartContext();
   
     const handleSubmit = (ev) => {
         ev.preventDefault();
+        //Si el email no se confirma, no permite hacer el envío a Firebase
             if (emailMatch === true){
             sendFirebase();
         }
@@ -28,8 +29,9 @@ const BuyerForm = ({form,changeHandler,sendFirebase, emailMatch}) => {
             </div>
             <div className="formInput">
                 <label htmlFor="email">Escribe de nuevo el email</label>
-                <input type="email" name="email2" id="email" value=  {form.email2} onChange={changeHandler} required/>
+                <input type="email" name="email2" id="email2" value=  {form.email2|| ""} onChange={changeHandler} required/>
             </div>
+            {/* Parrafo con texto condicionado que muestra si los emails coinciden o no */}
             {(emailMatch)? <p>Los email coinciden</p> : <p className="formError">Las direcciones de Email deben coincidir para generar la orden</p>}
             <div className="formInput">
                 <label htmlFor="address">Dirección</label>
@@ -39,7 +41,7 @@ const BuyerForm = ({form,changeHandler,sendFirebase, emailMatch}) => {
                 <label htmlFor="phone">Teléfono</label>
                 <input type="tel" name="phone" id="phone" value={form.phone} onChange={changeHandler} required />
             </div>
-
+            {/* Solo activa el boton de enviar si hay elementos en el carrito */}
             {(cart.length !== 0) ?
             <div>
                <p className="advertisement">Asegúrate que todos los datos estén correctos y finaliza tu orden</p>

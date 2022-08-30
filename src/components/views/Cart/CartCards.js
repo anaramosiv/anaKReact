@@ -9,11 +9,11 @@ const CartCard = () => {
   const {cart} = useCartContext();
 
   return(
-    <div className='cardBoss'>
+    <div className="cardBoss">
         {
           cart.map(prod => 
         {return(
-            <div className='cardComplete' key={prod.id}>
+            <div className="cardComplete" key={prod.id}>
             <ItemPreview  
             name ={prod.name} 
             id={prod.id} 

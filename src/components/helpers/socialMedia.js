@@ -2,7 +2,7 @@ import facebook from 'image/social/facebook.svg'
 import instagram from'image/social/instagram.svg'
 import github from 'image/social/github.svg'
 
-
+//Enlaces a redes sociales utilizados en el footer
 const socialMedia = [
     {
     "nombre": "Facebook",

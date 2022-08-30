@@ -13,7 +13,7 @@ import Checkout from './components/screens/Checkout/Checkout';
 import CartOrderPlacement from './components/views/CartOrderPlacement/CartOrderPlacement';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import OrderDetailContainer from './components/views/OrderDetailContainer/OrderDetailContainer';
-import Firebase from 'components/helpers/Firebase';
+
 
 function App() {
   return (

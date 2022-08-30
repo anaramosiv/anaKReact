@@ -1,16 +1,12 @@
 .cart {
     padding: 1.5rem;
     position: relative;
-
-
 }
 
 .cart img {
     width: 2rem;
     height: 2rem;
-    
 }
-
 
 .cart a {
     text-decoration: none;

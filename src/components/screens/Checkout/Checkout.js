@@ -1,8 +1,8 @@
 import React from 'react'
-import FormContainer from 'components/views/FormContainer'
-import ItemCart from "components/screens/Cart/ItemCart"
 import './checkout.css'
 import { useCartContext } from 'context/CartContext/CartContext'
+import FormContainer from 'components/views/FormContainer'
+import ItemCart from "components/screens/Cart/ItemCart"
 
 const Checkout = () => {
   const {cart, totalAmount} = useCartContext();

@@ -14,27 +14,24 @@ const orderRef = doc(db, "orders", id);
 getDoc(orderRef).then(snapshot =>{
   if(snapshot.data()){
     setOrder({id:snapshot.id, ...snapshot.data()})
-  }
-} 
-  )
+  }});
 }
-console.log(order)
+
+//Setea el valor introducido en el input para consultar la orden
 const inputIdHandler = (ev)=>{
     setId(ev.target.value);
     setOrder();
-    console.log(ev.target.value)
-  
 }
   return (
-    <section className='checkout'>
-        <h2>Introduce el id para ver los datos de tu compra</h2>
-        <div className="searchZone">
-       <input onChange={inputIdHandler} value= {id}/>
-       <button onClick={()=>handleBuscar()} className="searchButton">BUSCAR</button>
-       </div>
-       {(!order)?
-       <div className='searchZone'><p>No se ha encontrado la compra</p></div>
-       :
+    <section className="checkout">
+      <h2>Introduce el id para ver los datos de tu compra</h2>
+      <div className="searchZone">
+        <input onChange={inputIdHandler} value= {id}/>
+        <button onClick={()=>handleBuscar()} className="searchButton">BUSCAR</button>
+      </div>
+      {(!order)?
+       <div className="searchZone"><p>No se ha encontrado la compra</p></div>
+      :
        <OrderDetail order={order}/>
        }
 

@@ -1,7 +1,8 @@
 import React from 'react'
-import myimage from './../../../image/OndaTickets.svg'
-import './logoBrand.css';
 import { Link } from 'react-router-dom';
+import myimage from 'image/OndaTickets.svg'
+import './logoBrand.css';
+
 
 
 const LogoBrand = () => {

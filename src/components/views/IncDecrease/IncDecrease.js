@@ -37,7 +37,7 @@ export const IncDecrease = ({stock, minAdd, setAddCart, detalle}) => {
   )
 
   return (
-    <div className={`${detalle.status!== "onsale"? " incDecrease buttonDisabled": "incDecrease"} `}>
+    <div className={`${detalle.status!== "onsale"? "buttonDisabled" : "incDecrease"} `}>
       <p>Cantidad</p>
       <div className="sumRest">
       <button onClick={() => handleStockRestar({minAdd})}> - </button>
